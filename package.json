@@ -16,7 +16,8 @@
 		"test": "jest",
 		"tsc": "pnpm -r exec tsc --noEmit",
 		"version": "changeset version",
-		"publish": "changeset publish"
+		"publish": "changeset publish",
+		"storybook": "pnpm -r run storybook"
 	},
 	"dependencies": {
 		"@storybook/react": "7.0.0-rc.11",

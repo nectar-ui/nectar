@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"license": "The nectarUi storybook.",
 	"scripts": {
-		"build": "storybook dev -c ./src "
+		"storybook": "storybook dev -c ./src "
 	},
 	"private": true,
 	"dependencies": {

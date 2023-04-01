@@ -1,5 +1,4 @@
-import tsnode from 'ts-node'
-tsnode.register()
+require('ts-node').register()
 
 import { mediaToCss, selectorsToCss, tokensToCss } from './toCss'
 

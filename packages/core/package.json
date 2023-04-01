@@ -21,9 +21,6 @@
 		"dist",
 		"types"
 	],
-	"scripts": {
-		"build": "tsc"
-	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"
 	}

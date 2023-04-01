@@ -21,9 +21,6 @@
 		"dist",
 		"types"
 	],
-	"scripts": {
-		"build": "tsc"
-	},
 	"dependencies": {
 		"modern-normalize": "^1.1.0"
 	},

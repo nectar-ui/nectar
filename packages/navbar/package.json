@@ -21,9 +21,6 @@
 		"dist",
 		"types"
 	],
-	"scripts": {
-		"build": "tsc"
-	},
 	"dependencies": {
 		"@nectar-ui/core": "workspace:*",
 		"@nectar-ui/box": "workspace:*",

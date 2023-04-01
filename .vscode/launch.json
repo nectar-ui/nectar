@@ -1,0 +1,23 @@
+{
+	"configurations": [
+		{
+			"name": "node",
+			"type": "node",
+			"request": "launch",
+			"runtimeArgs": [
+				"--loader",
+				"ts-node/esm",
+				"--experimental-specifier-resolution=node"
+			],
+			"cwd": "${fileDirname}",
+			"args": ["${file}"]
+		},
+		{
+			"name": "Jest",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/jest/bin/jest",
+			"args": ["${fileBasename}"]
+		}
+	]
+}
