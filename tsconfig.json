@@ -1,0 +1,17 @@
+{
+	"extends": "./tsconfig.base.json",
+	"include": ["*.ts"],
+	"references": [
+		{ "path": "./packages/core" },
+		{ "path": "./packages/components" },
+		{ "path": "./packages/provider" },
+		{ "path": "./packages/reset" },
+		{ "path": "./packages/box" },
+		{ "path": "./packages/navbar" },
+		{ "path": "./packages/palettes" },
+		{ "path": "./packages/postcss-plugin" }
+	],
+	"ts-node": {
+		"esm": true
+	}
+}

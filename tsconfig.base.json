@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"jsx": "react-jsx",
+		"lib": ["esnext", "dom"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"pretty": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "esnext"
+	}
+}

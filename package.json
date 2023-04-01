@@ -1,15 +1,53 @@
 {
-  "name": "nectar-ui",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "nx": "15.8.9",
-    "prettier": "^2.6.2"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "nectar-ui",
+	"description": "The nectar-ui design system.",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"repository": "nectar-ui/nectar-ui",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "pnpm -r exec vite build",
+		"changeset": "changeset add",
+		"clean": "git clean -Xdf",
+		"format": "prettier --write . --ignore-path .gitignore",
+		"init": "nvm use && pnpm install",
+		"lint": "eslint . --ignore-path .gitignore --cache --cache-location var/eslint/cache",
+		"test": "jest",
+		"tsc": "pnpm -r exec tsc --noEmit",
+		"version": "changeset version",
+		"publish": "changeset publish"
+	},
+	"dependencies": {
+		"@storybook/react": "7.0.0-rc.11",
+		"typescript": "^5.0.2",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.57.0",
+		"@typescript-eslint/parser": "^5.57.0",
+		"@changesets/cli": "^2.26.1",
+		"@changesets/changelog-github": "^0.4.8",
+		"vite": "^4.2.1",
+		"vite-plugin-dts": "^2.1.0",
+		"eslint": "^8.37.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jest": "^27.2.1",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-testing-library": "^5.10.2",
+		"jest": "^29.5.0",
+		"prettier": "^2.8.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"ts-jest": "^29.0.5",
+		"ts-node": "^10.9.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^27.5.1",
+		"@types/node": "^17.0.23",
+		"@types/react": "^17.0.38",
+		"@types/react-dom": "^17.0.11"
+	}
 }

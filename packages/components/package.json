@@ -1,0 +1,36 @@
+{
+	"name": "@nectar-ui/components",
+	"version": "0.1.0",
+	"description": "The nectarUi components.",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nectar-ui/nectar-ui.git",
+		"directory": "packages/components"
+	},
+	"type": "module",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"publishConfig": {
+		"access": "public",
+		"main": "dist/index.js",
+		"types": "types/index.d.ts"
+	},
+	"files": [
+		"dist",
+		"types"
+	],
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@nectar-ui/provider": "workspace:*",
+		"@nectar-ui/box": "workspace:*",
+		"@nectar-ui/navbar": "workspace:*",
+		"@nectar-ui/palettes": "workspace:*"
+	},
+	"peerDependencies": {
+		"react": "^16.8 || ^17 || ^18"
+	}
+}
