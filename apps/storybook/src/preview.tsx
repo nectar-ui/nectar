@@ -1,5 +1,6 @@
-import type { Preview } from '@storybook/react'
-import { NectarProvider } from '@nectar-ui/components'
+import { withThemeByClassName } from '@storybook/addon-styling'
+import { Preview } from '@storybook/react'
+import './styles.css'
 
 const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,15 +12,18 @@ const parameters = {
 	}
 }
 
-const preview: Preview = {
-	parameters,
-	decorators: [
-		Story => (
-			<NectarProvider>
-				<Story />
-			</NectarProvider>
-		)
-	]
-}
+const decorators = [
+	withThemeByClassName({
+		themes: {
+			light: 'light',
+			dark: 'dark'
+		},
+		defaultTheme: 'light',
+		parentSelector: 'body'
+	})
+]
 
-export default preview
+export default {
+	parameters,
+	decorators
+} as Preview

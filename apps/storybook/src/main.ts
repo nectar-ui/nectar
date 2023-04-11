@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-webpack5'
-import { resolve } from 'path'
 
 const config: StorybookConfig = {
 	stories: ['../../../packages/*/src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -8,21 +7,47 @@ const config: StorybookConfig = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
 		{
-			name: '@storybook/addon-postcss',
+			name: '@storybook/addon-styling',
 			options: {
-				postcssLoaderOptions: {
-					implementation: require('postcss'),
-					postcssOptions: {
-						plugins: [
-							[require.resolve('@nectar-ui/postcss-plugin'), { theme: resolve('src/theme.ts') }],
-							['postcss-preset-env', { stage: 3 }],
-							'postcss-nested'
-						]
-					}
+				cssBuildRule: {
+					test: /\.css/,
+					use: [
+						'style-loader',
+						'css-loader',
+						{
+							loader: 'postcss-loader',
+							options: {
+								postcssOptions: {
+									plugins: [
+										'postcss-import',
+										[require.resolve('@nectar-ui/postcss-plugin'), { config: './src/nectar.config.js' }],
+										['postcss-preset-env', { stage: 3 }],
+										'postcss-nested'
+									]
+								}
+							}
+						}
+					]
 				}
 			}
 		}
 	],
+	webpackFinal: async config => {
+		config.module?.rules?.push({
+			test: /\.(ts|tsx)$/,
+			use: [
+				{
+					loader: require.resolve('babel-loader')
+				}
+			]
+		})
+		config.resolve!.extensionAlias = {
+			'.js': ['.ts', '.tsx', '.js']
+		}
+		config.resolve?.extensions?.push('.ts', '.tsx')
+		return config
+	},
+
 	framework: {
 		name: '@storybook/react-webpack5',
 		options: {}

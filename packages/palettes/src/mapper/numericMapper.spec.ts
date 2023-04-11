@@ -1,5 +1,5 @@
 import { red } from '@radix-ui/colors'
-import { numericMapper } from '../../mapper/numericMapper'
+import { numericMapper } from './numericMapper.js'
 
 describe('@nectar-ui/palettes - mapper/numericMapper.ts', () => {
 	it('accepts a name and a pallete to map the name to, and returns a numerically mapped color palette.`.', () => {

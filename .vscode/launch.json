@@ -4,11 +4,7 @@
 			"name": "node",
 			"type": "node",
 			"request": "launch",
-			"runtimeArgs": [
-				"--loader",
-				"ts-node/esm",
-				"--experimental-specifier-resolution=node"
-			],
+			"runtimeArgs": ["--loader", "ts-node/esm"],
 			"cwd": "${fileDirname}",
 			"args": ["${file}"]
 		},

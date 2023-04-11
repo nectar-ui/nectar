@@ -1,3 +1,3 @@
-export { numericMap, numericMapper } from './mapper/numericMapper'
-export { paletteMapperFactory } from './paletteMapperFactory'
-export type { Palette, PaletteMap, PaletteMapper } from './types'
+export { numericMap, numericMapper } from './mapper/numericMapper.js'
+export { paletteMapperFactory } from './paletteMapperFactory.js'
+export type { Palette, PaletteMap, PaletteMapper } from './types.js'

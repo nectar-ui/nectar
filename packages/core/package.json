@@ -9,18 +9,18 @@
 		"url": "https://github.com/nectar-ui/nectar-ui.git",
 		"directory": "packages/core"
 	},
+	"access": "public",
 	"type": "module",
-	"main": "src/index.ts",
-	"types": "src/index.ts",
-	"publishConfig": {
-		"access": "public",
-		"main": "dist/index.js",
-		"types": "types/index.d.ts"
+	"exports": {
+		"dev": "./src/index.ts",
+		"default": "./dist/index.js"
 	},
 	"files": [
-		"dist",
-		"types"
+		"dist"
 	],
+	"dependencies": {
+		"csstype": "^3.1.2"
+	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"
 	}

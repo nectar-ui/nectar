@@ -1,12 +1,12 @@
-import type { Component, Props } from '@nectar-ui/core'
 import { Box } from '@nectar-ui/box'
-import c from 'clsx'
-import './Navbar.css'
+import type { Component, Props } from '@nectar-ui/core'
+import { clsx } from 'clsx'
 import { ElementType } from 'react'
+import './Navbar.css'
 
-export interface NavbarOwnProps {}
+export type NavOwnProps = {}
 
-export type NavbarProps = Props<'nav', NavbarOwnProps>
+export type NavbarProps = Props<'nav', NavOwnProps>
 
 export interface NavbarComponents {
 	section: Component<Props<ElementType, {}>>
@@ -16,7 +16,7 @@ export type NavbarComponent = Component<NavbarProps> & NavbarComponents
 
 export const Navbar: NavbarComponent = ({ children, className, ...props }) => {
 	return (
-		<Box as="nav" className={c('navbar', className)} {...props}>
+		<Box as="nav" className={clsx('navbar', className)} {...props}>
 			<div className="navbar__container">{children}</div>
 		</Box>
 	)
@@ -24,7 +24,7 @@ export const Navbar: NavbarComponent = ({ children, className, ...props }) => {
 
 Navbar.section = ({ children, className, ...props }) => {
 	return (
-		<Box className={c('navbar__section', className)} {...props}>
+		<Box className={clsx('navbar__section', className)} {...props}>
 			{children}
 		</Box>
 	)
@@ -32,7 +32,7 @@ Navbar.section = ({ children, className, ...props }) => {
 
 Navbar.item = ({ children, className, ...props }) => {
 	return (
-		<Box className={c('navbar__item', className)} {...props}>
+		<Box className={clsx('navbar__item', className)} {...props}>
 			{children}
 		</Box>
 	)

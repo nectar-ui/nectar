@@ -1,9 +1,9 @@
 {
-	"extends": "../../tsconfig.base.json",
+	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"outDir": "./types",
+		"declarationDir": "./dist",
 		"rootDir": "./src"
 	},
 	"include": ["./src"],
-	"references": [{ "path": "../../packages/reset" }, { "path": "../../packages/nectar" }]
+	"references": [{ "path": "../../packages/postcss-plugin" }, { "path": "../../packages/components" }]
 }

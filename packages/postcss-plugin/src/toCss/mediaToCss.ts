@@ -1,7 +1,8 @@
-import { camelCaseReplacer } from '../replacer'
+import type { MediaQueries } from '@nectar-ui/core'
+import { camelCaseReplacer } from '../replacer/index.js'
 
-export function mediaToCss(media) {
-	const css = {}
+export function mediaToCss(media: MediaQueries) {
+	const css: Record<string, string> = {}
 	for (let key in media) {
 		let value = media[key]
 		key = `--${camelCaseReplacer(key)}`

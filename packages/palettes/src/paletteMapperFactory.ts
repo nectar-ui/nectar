@@ -1,12 +1,13 @@
 import * as Palettes from '@radix-ui/colors'
-import type { PaletteMap, PaletteMapper } from './types'
+import type { PaletteMap, PaletteMapper } from './types.js'
 
 export function paletteMapperFactory(map: PaletteMap): PaletteMapper {
 	return (name, palette) => {
-		const colorPalette = Palettes[palette]
+		const colorPalette: Record<`${typeof palette}${number}`, string> = Palettes[palette]
+		console.log(colorPalette)
 		return Object.fromEntries(
 			map.map((key, index) => {
-				return [`${name}${key}`, colorPalette[`${palette}${index + 1}`]]
+				return [`${name}${key}`, colorPalette[`${palette.replace('Dark', '') as typeof palette}${index + 1}`]]
 			})
 		)
 	}

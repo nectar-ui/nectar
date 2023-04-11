@@ -1,4 +1,5 @@
-import type { JSXElementConstructor, ComponentPropsWithoutRef, ComponentPropsWithRef, ElementType, ReactElement } from 'react'
+import type { PropertiesHyphen } from 'csstype'
+import type { ComponentPropsWithRef, ComponentPropsWithoutRef, ElementType, JSXElementConstructor, ReactElement } from 'react'
 
 export interface GlobalProps<E extends ElementType> {
 	as?: E
@@ -19,15 +20,6 @@ export type PropsWithRef<E extends ElementType, P = {}> = Props<E, P> & {
 
 export type Component<P = {}> = (props: P) => ReactElement | null
 
-/**
- * Tokens.
- *
- * Organized into `modes` > `scales` > `tokens`.
- * Color modes will be converted to css custom properties.
- *
- * The 'base' mode is the default. Custom properties are applied to `:root {}`.
- * All other modes custom properties are appplied to `.mode {}`.
- */
 export interface Tokens {
 	base: ColorMode
 	[mode: string]: ColorMode
@@ -40,25 +32,19 @@ export interface Scale {
 }
 export type Token = boolean | number | string
 
-/**
- * Media Queries.
- */
 export interface MediaQueries {
 	[query: string]: string
 }
 
-/**
- * Selectors.
- */
 export interface Selectors {
 	[selector: string]: string
 }
 
-/**
- * The nectar config object type.
- */
 export interface NectarConfig {
 	tokens?: Tokens
 	mediaQueries?: MediaQueries
 	selectors?: Selectors
+	properties?: {
+		[property: string]: (value: any) => PropertiesHyphen
+	}
 }
