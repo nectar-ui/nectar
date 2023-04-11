@@ -74,7 +74,8 @@ importers:
       '@storybook/addon-essentials': ^7.0.2
       '@storybook/addon-interactions': ^7.0.2
       '@storybook/addon-links': ^7.0.2
-      '@storybook/addon-styling': next
+      '@storybook/addon-styling': 1.0.0
+      '@storybook/react': ^7.0.2
       '@storybook/react-webpack5': ^7.0.2
       babel-loader: ^9.1.2
       css-loader: ^6.7.3
@@ -100,7 +101,8 @@ importers:
       '@storybook/addon-essentials': 7.0.2_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-interactions': 7.0.2_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.0.2_biqbaboplfbrettd7655fr4n2y
-      '@storybook/addon-styling': 1.0.0-next.2_56ka6bkkjnjkeytdxyqq5d3jti
+      '@storybook/addon-styling': 1.0.0_56ka6bkkjnjkeytdxyqq5d3jti
+      '@storybook/react': 7.0.2_grokbpfbuuosdhrkscgthnz2vm
       '@storybook/react-webpack5': 7.0.2_hxygsdyzwnesq7hedin6s7h2hy
       babel-loader: 9.1.2_kh7tlia7ljiqfn7rrvxklxkh5i
       css-loader: 6.7.3_webpack@5.77.0
@@ -3031,8 +3033,8 @@ packages:
       ts-dedent: 2.2.0
     dev: false
 
-  /@storybook/addon-styling/1.0.0-next.2_56ka6bkkjnjkeytdxyqq5d3jti:
-    resolution: {integrity: sha512-RA7/2gD4rQTYYN+mEu1L8eAIl8gwxtsJeREq4fEeuagp1TrcLPtIqp6HGrTTeANTvaf9JwKYWdjF+L8laupedg==}
+  /@storybook/addon-styling/1.0.0_56ka6bkkjnjkeytdxyqq5d3jti:
+    resolution: {integrity: sha512-JfFPIg8Q/z8fjg5HOfFUK+zgs7FXZamCx58elrxOggcQ4FXCs5buRlw6b/mwzAw4nSGDyBPpvZVqEwh0xcduIQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
