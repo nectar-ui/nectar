@@ -20,7 +20,7 @@ const config: StorybookConfig = {
 								postcssOptions: {
 									plugins: [
 										'postcss-import',
-										[require.resolve('@nectar-ui/postcss-plugin'), { config: './src/nectar.config.js' }],
+										[require.resolve('@nectar-ui/nectar')],
 										['postcss-preset-env', { stage: 3 }],
 										'postcss-nested'
 									]
@@ -32,6 +32,7 @@ const config: StorybookConfig = {
 			}
 		}
 	],
+
 	webpackFinal: async config => {
 		config.module?.rules?.push({
 			test: /\.(ts|tsx)$/,
@@ -41,8 +42,11 @@ const config: StorybookConfig = {
 				}
 			]
 		})
-		config.resolve!.extensionAlias = {
-			'.js': ['.ts', '.tsx', '.js']
+		config.resolve = {
+			...config.resolve,
+			extensionAlias: {
+				'.js': ['.ts', '.tsx', '.js']
+			}
 		}
 		config.resolve?.extensions?.push('.ts', '.tsx')
 		return config

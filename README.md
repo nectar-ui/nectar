@@ -1,15 +1,24 @@
 # NectarUI
 
-NectarUI is the personal design system of @iambrennanwalsh.
+The personal design system of @iambrennanwalsh.
+
+---
+
+## Table Of Contents
+
+1. Get Started
+2. Configuration
 
 ---
 
 ## Get Started
 
-1. Install via your perferred package manger (npm, yarn, pnpm).
+Install, setup, and customize the NectarUi library. NectarUi is built on PostCSS.
+
+1. Install `@nectar-ui/nectar` and it's peer dependencies via your perferred package manger (npm, yarn, pnpm).
 
 ```sh
-npm install @nectar-ui/nectar
+npm install @nectar-ui/nectar postcss@^8
 ```
 
 2. Create your config file. [Read more about the config](#config).

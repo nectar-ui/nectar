@@ -11,10 +11,7 @@
 	},
 	"access": "public",
 	"type": "module",
-	"exports": {
-		"dev": "./src/index.ts",
-		"default": "./dist/index.js"
-	},
+	"exports": "./dist/index.js",
 	"dependencies": {
 		"@nectar-ui/core": "workspace:*",
 		"@nectar-ui/box": "workspace:*",

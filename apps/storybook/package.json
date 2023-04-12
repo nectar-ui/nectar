@@ -13,10 +13,9 @@
 		"storybook": "storybook dev -c ./src "
 	},
 	"access": "public",
-	"type": "module",
+	"type": "commonjs",
 	"dependencies": {
-		"@nectar-ui/postcss-plugin": "workspace:*",
-		"@nectar-ui/components": "workspace:*",
+		"@nectar-ui/nectar": "workspace:*",
 		"@babel/core": "^7.21.4",
 		"babel-loader": "^9.1.2",
 		"@babel/preset-env": "^7.21.4",

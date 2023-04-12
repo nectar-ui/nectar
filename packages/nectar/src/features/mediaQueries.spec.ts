@@ -1,6 +1,6 @@
-import { mediaToCss } from './mediaToCss.js'
+import { prepareMediaQueries } from './mediaQueries.js'
 
-describe('@nectar-ui/postcss-plugin - toCss/mediaToCss', () => {
+describe('@nectar-ui/nectar - features/mediaQueries', () => {
 	const want = {
 		'--sm': '(min-width: 36rem)',
 		'--md': '(min-width: 48rem)',
@@ -14,7 +14,7 @@ describe('@nectar-ui/postcss-plugin - toCss/mediaToCss', () => {
 			lg: '(min-width: 64rem)'
 		}
 
-		const got = mediaToCss(test)
+		const got = prepareMediaQueries(test)
 		expect(got).toStrictEqual(want)
 	})
 
@@ -24,7 +24,7 @@ describe('@nectar-ui/postcss-plugin - toCss/mediaToCss', () => {
 			md: 'min-width: 48rem',
 			lg: 'min-width: 64rem'
 		}
-		const got = mediaToCss(test)
+		const got = prepareMediaQueries(test)
 		expect(got).toStrictEqual(want)
 	})
 })

@@ -1,4 +1,4 @@
-import { numericMapper } from '@nectar-ui/components'
+import { numericMapper } from '@nectar-ui/nectar'
 
 const pxToRem = (px, base = 16) => `${px / base}rem`
 

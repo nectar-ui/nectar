@@ -4,5 +4,5 @@
 		"declarationDir": "./dist",
 		"rootDir": "./src"
 	},
-	"references": []
+	"references": [{ "path": "./../core" }, { "path": "./../components" }]
 }

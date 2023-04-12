@@ -3,11 +3,10 @@
 	"references": [
 		{ "path": "./packages/core" },
 		{ "path": "./packages/components" },
-		{ "path": "./packages/reset" },
 		{ "path": "./packages/box" },
 		{ "path": "./packages/navbar" },
 		{ "path": "./packages/palettes" },
-		{ "path": "./packages/postcss-plugin" }
+		{ "path": "./packages/nectar" }
 	],
 	"include": ["*.ts"]
 }

@@ -1,6 +1,6 @@
-import { tokensToCss } from './tokensToCss.js'
+import { prepareTokens } from './tokens.js'
 
-describe('@nectar-ui/postcss-plugin - toCss/tokensToCss', () => {
+describe('@nectar-ui/postcss-plugin - features/tokens', () => {
 	it('transforms an object of custom properties into valid css.', () => {
 		const want = {
 			base: { '--colors-primary': 'red', '--colors-secondary': 'blue' },
@@ -22,7 +22,7 @@ describe('@nectar-ui/postcss-plugin - toCss/tokensToCss', () => {
 			}
 		}
 
-		const got = tokensToCss(test)
+		const got = prepareTokens(test)
 		expect(got).toStrictEqual(want)
 	})
 })

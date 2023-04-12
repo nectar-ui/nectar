@@ -15,7 +15,7 @@ export const Nav: Story = {
 	render: args => (
 		<Navbar {...args}>
 			<Navbar.section>
-				<Navbar.item>nectarUi</Navbar.item>
+				<Navbar.item>NectarUi</Navbar.item>
 			</Navbar.section>
 			<Navbar.section>
 				<Navbar.item as="a" href="./">
