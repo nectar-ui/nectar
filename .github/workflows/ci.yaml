@@ -13,10 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install nodeJs, and pnpm.
+      - name: Install nodejs, and pnpm.
         uses: asdf-vm/actions/install@v2
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install node modules.
+        run: pnpm install
 
       - name: Lint
         run: pnpm run lint
