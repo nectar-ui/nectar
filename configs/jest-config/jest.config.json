@@ -1,4 +1,5 @@
 {
+	"rootDir": "./../../",
 	"cacheDirectory": "<rootDir>/var/jest/cache",
 	"coverageDirectory": "<rootDir>/var/jest/coverage",
 	"collectCoverageFrom": ["**/src/*.{ts,tsx}", "!**/index.{ts,tsx}", "!**/src/+(*.)+(spec|test).+(ts|js)?(x)"],
@@ -9,9 +10,9 @@
 		"^(\\.{1,2}/.*)\\.js$": "$1"
 	},
 	"modulePathIgnorePatterns": ["/dist/"],
-	"setupFilesAfterEnv": ["<rootDir>/tools/test-utils/bootstrap.ts"],
-	"snapshotResolver": "<rootDir>/tools/test-utils/snapshotResolver.ts",
-	"testMatch": ["**/+(*.)+(spec|test).+(ts|js)?(x)"],
+	"setupFilesAfterEnv": ["./configs/jest-config/bootstrap.ts"],
+	"snapshotResolver": "./configs/jest-config/snapshotResolver.ts",
+	"testMatch": ["**/+(*.)+(spec).+(ts)?(x)"],
 	"testPathIgnorePatterns": ["/node_modules/", "/dist/"],
 	"transform": {
 		"^.+\\.tsx?$": [

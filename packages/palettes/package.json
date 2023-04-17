@@ -6,15 +6,22 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nectar-ui/nectar-ui.git",
+		"url": "https://github.com/nectar-ui/nectar.git",
 		"directory": "packages/palettes"
 	},
 	"access": "public",
 	"type": "module",
-	"exports": "./dist/index.js",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
 	"files": [
 		"dist"
 	],
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
+	},
 	"dependencies": {
 		"@radix-ui/colors": "^0.1.8"
 	}

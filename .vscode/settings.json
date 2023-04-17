@@ -7,7 +7,6 @@
 	"javascript.preferences.importModuleSpecifierEnding": "js",
 	"typescript.preferences.importModuleSpecifierEnding": "js",
 	"npm.packageManager": "pnpm",
-	"prettier.configPath": ".prettierrc",
 	"prettier.ignorePath": ".gitignore",
 	"typescript.tsdk": "node_modules/typescript/lib"
 }

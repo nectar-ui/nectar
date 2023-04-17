@@ -1,0 +1,55 @@
+.navbar {
+	--navbar-bg: var(--color-contrast1);
+	--navbar-color: var(--color-contrast11);
+	--navbar-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	--navbar-height: 3.5rem;
+
+	background-color: var(--navbar-bg);
+	color: var(--navbar-color);
+	box-shadow: var(--navbar-shadow);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	--navbar-container-max-width: 1200px;
+
+	width: 100%;
+	height: var(--navbar-height);
+	max-width: var(--navbar-container-max-width);
+	display: flex;
+	justify-content: space-between;
+
+	@media (--sm) {
+		padding: 0 var(--spacing-block);
+	}
+}
+
+.section {
+	height: var(--navbar-height);
+	display: flex;
+}
+
+.item {
+	--navbar-item-bg: transparent;
+	--navbar-item-color: var(--color-primary9);
+	--navbar-item-hover-bg: var(--color-primary9);
+	--navbar-item-hover-color: var(--color-contrast12);
+	--navbar-item-active-bg: var(--navbar-item-hover-bg);
+	--navbar-item-active-color: var(--navbar-item-hover-color);
+
+	background-color: var(--navbar-item-bg);
+	color: var(--navbar-item-color);
+	height: var(--navbar-height);
+	display: flex;
+	align-items: center;
+	padding: 0 var(--spacing-block);
+	transition: background-color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--navbar-item-hover-bg);
+		color: var(--navbar-item-hover-color);
+	}
+}

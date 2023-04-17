@@ -1,5 +1,6 @@
 # misc
 *.log
+*.map
 .DS_Store
 TODO.md
 
@@ -10,8 +11,5 @@ var
 dist
 
 # typescript
-types
 *.tsbuildinfo
-
 *.d.ts
-*.d.ts.map

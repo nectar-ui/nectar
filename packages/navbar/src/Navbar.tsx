@@ -2,7 +2,7 @@ import { Box } from '@nectar-ui/box'
 import type { Component, Props } from '@nectar-ui/core'
 import { clsx } from 'clsx'
 import { ElementType } from 'react'
-import './Navbar.css'
+import styles from './navbar.module.css'
 
 export type NavOwnProps = {}
 
@@ -16,15 +16,15 @@ export type NavbarComponent = Component<NavbarProps> & NavbarComponents
 
 export const Navbar: NavbarComponent = ({ children, className, ...props }) => {
 	return (
-		<Box as="nav" className={clsx('navbar', className)} {...props}>
-			<div className="navbar__container">{children}</div>
+		<Box as="nav" className={clsx(styles.navbar, className)} {...props}>
+			<div className={styles.container}>{children}</div>
 		</Box>
 	)
 }
 
 Navbar.section = ({ children, className, ...props }) => {
 	return (
-		<Box className={clsx('navbar__section', className)} {...props}>
+		<Box className={clsx(styles.section, className)} {...props}>
 			{children}
 		</Box>
 	)
@@ -32,7 +32,7 @@ Navbar.section = ({ children, className, ...props }) => {
 
 Navbar.item = ({ children, className, ...props }) => {
 	return (
-		<Box className={clsx('navbar__item', className)} {...props}>
+		<Box className={clsx(styles.item, className)} {...props}>
 			{children}
 		</Box>
 	)

@@ -6,12 +6,22 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nectar-ui/nectar-ui.git",
+		"url": "https://github.com/nectar-ui/nectar.git",
 		"directory": "packages/navbar"
 	},
 	"access": "public",
 	"type": "module",
-	"exports": "./dist/index.js",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
+	},
+	"files": [
+		"dist"
+	],
 	"dependencies": {
 		"@nectar-ui/core": "workspace:*",
 		"@nectar-ui/box": "workspace:*",

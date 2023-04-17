@@ -6,15 +6,22 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nectar-ui/nectar-ui.git",
+		"url": "https://github.com/nectar-ui/nectar.git",
 		"directory": "packages/nectar"
 	},
 	"access": "public",
 	"type": "module",
-	"exports": "./dist/index.js",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
 	"files": [
 		"dist"
 	],
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts --shims true"
+	},
 	"dependencies": {
 		"@nectar-ui/core": "workspace:*",
 		"@nectar-ui/components": "workspace:*",
@@ -23,10 +30,12 @@
 		"cosmiconfig-typescript-loader": "^4.3.0",
 		"modern-normalize": "^1.1.0"
 	},
+	"devDependencies": {
+		"@types/node": "^16.11.6",
+		"ts-node": "^10.4.0",
+		"typescript": "^5.0.2"
+	},
 	"peerDependencies": {
 		"postcss": "^8"
-	},
-	"esbuildOptions": {
-		"platform": "node"
 	}
 }

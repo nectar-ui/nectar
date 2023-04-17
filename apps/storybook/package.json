@@ -1,19 +1,19 @@
 {
 	"name": "@nectar-ui/storybook",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"description": "The nectarUi storybook.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nectar-ui/nectar-ui.git",
+		"url": "https://github.com/nectar-ui/nectar.git",
 		"directory": "apps/storybook"
 	},
 	"scripts": {
 		"storybook": "storybook dev -c ./src "
 	},
 	"access": "public",
-	"type": "commonjs",
+	"type": "module",
 	"dependencies": {
 		"@nectar-ui/nectar": "workspace:*",
 		"@babel/core": "^7.21.4",
@@ -40,5 +40,9 @@
 		"typescript": "^5.0.2",
 		"webpack": "^5.77.0",
 		"ts-loader": "^9.4.2"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"ts-node": "^10.4.0"
 	}
 }
