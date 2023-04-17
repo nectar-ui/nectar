@@ -10798,8 +10798,8 @@ packages:
       glob: 7.2.3
     dev: false
 
-  /rollup/3.20.3:
-    resolution: {integrity: sha512-u6/O1X42CAZ79rbk+smyONJQLTpwFBL7InpRa/AVWia5lq60w5J/PUsVHCOgSolN0X9R2GjQ41fZm3x28Hk1lA==}
+  /rollup/3.20.4:
+    resolution: {integrity: sha512-n7J4tuctZXUErM9Uc916httwqmTc63zzCr2+TLCiSCpfO/Xuk3g/marGN1IlRJZi+QF3XMYx75PxXRfZDVgaRw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -11708,7 +11708,7 @@ packages:
       postcss: 8.4.22
       postcss-load-config: 3.1.4_postcss@8.4.22
       resolve-from: 5.0.0
-      rollup: 3.20.3
+      rollup: 3.20.4
       source-map: 0.8.0-beta.0
       sucrase: 3.32.0
       tree-kill: 1.2.2

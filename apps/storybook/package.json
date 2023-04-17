@@ -1,6 +1,6 @@
 {
 	"name": "@nectar-ui/storybook",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "The nectarUi storybook.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",
@@ -11,7 +11,7 @@
 	},
 	"scripts": {
 		"dev": "storybook dev -c ./src",
-		"build": "storybook build -c ./src"
+		"prod": "storybook build -c ./src"
 	},
 	"access": "public",
 	"type": "module",

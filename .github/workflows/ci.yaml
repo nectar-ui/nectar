@@ -13,11 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install nodejs, and pnpm.
+      - name: Setup
         uses: asdf-vm/actions/install@v2
 
-      - name: Install node modules.
+      - name: Install
         run: pnpm install
+
+      - name: Build
+        run: pnpm run build
 
       - name: Lint
         run: pnpm run lint
@@ -28,13 +31,13 @@ jobs:
       - name: Test
         run: pnpm run test
 
-      - name: Create / Publish Versions
-        uses: changesets/action@master
-        with:
-          version: pnpm run version
-          commit: 'chore: Update Versions'
-          title: 'chore: update versions'
-          publish: pnpm run publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Version & Publish
+      #  uses: changesets/action@master
+      #  with:
+      #    version: pnpm run version
+      #    commit: 'chore: Update Versions'
+      #    title: 'chore: update versions'
+      #    publish: pnpm run publish
+      #  env:
+      #    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

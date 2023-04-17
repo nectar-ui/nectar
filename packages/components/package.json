@@ -1,6 +1,6 @@
 {
 	"name": "@nectar-ui/components",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "The nectarUi components.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",
