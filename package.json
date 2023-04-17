@@ -1,5 +1,6 @@
 {
 	"name": "nectar-ui",
+	"version": "0.0.1",
 	"description": "The nectar-ui design system.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"repository": "nectar-ui/nectar",
@@ -15,7 +16,9 @@
 		"build": "pnpm run --recursive --if-present build",
 		"changeset": "changeset add",
 		"version": "changeset version",
-		"publish": "changeset publish"
+		"publish": "changeset publish",
+		"storybook": "cd apps/storybook && pnpm run build",
+		"storybook:dev": "cd apps/storybook && pnpm run dev"
 	},
 	"dependencies": {
 		"@nectar-ui/eslint-config": "workspace:*",

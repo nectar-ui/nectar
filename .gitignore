@@ -6,7 +6,7 @@ TODO.md
 
 # build
 node_modules
-.next
+storybook-static
 var
 dist
 

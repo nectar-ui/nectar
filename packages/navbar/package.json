@@ -1,6 +1,6 @@
 {
 	"name": "@nectar-ui/navbar",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"description": "The nectarUi navbar component.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",

@@ -10,7 +10,8 @@
 		"directory": "apps/storybook"
 	},
 	"scripts": {
-		"storybook": "storybook dev -c ./src "
+		"dev": "storybook dev -c ./src",
+		"build": "storybook build -c ./src"
 	},
 	"access": "public",
 	"type": "module",
