@@ -7,8 +7,7 @@
 	"collectCoverage": true,
 	"extensionsToTreatAsEsm": [".ts", ".tsx"],
 	"moduleNameMapper": {
-		"^(\\.{1,2}/.*)\\.js$": "$1",
-		"\\.(css)$": "identity-obj-proxy"
+		"^(\\.{1,2}/.*)\\.js$": "$1"
 	},
 	"modulePathIgnorePatterns": ["/dist/"],
 	"setupFilesAfterEnv": ["./configs/jest-config/bootstrap.ts"],
