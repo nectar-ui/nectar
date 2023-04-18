@@ -13,6 +13,7 @@
 		"typecheck": "tsc --noEmit --emitDeclarationOnly false",
 		"test": "jest --config ./configs/jest-config/jest.config.json",
 		"lint": "eslint . --ignore-path .gitignore --cache --cache-location var/eslint/cache",
+		"types": "tsc -b",
 		"build": "pnpm run --recursive --if-present build",
 		"changeset": "changeset add",
 		"version": "changeset version",
@@ -21,10 +22,10 @@
 		"prod": "cd apps/storybook && pnpm run prod"
 	},
 	"dependencies": {
-		"@changesets/changelog-github": "^0.4.8",
-		"@changesets/cli": "^2.26.1",
 		"@nectar-ui/eslint-config": "workspace:*",
 		"@nectar-ui/prettier-config": "workspace:*",
+		"@changesets/changelog-github": "^0.4.8",
+		"@changesets/cli": "^2.26.1",
 		"@storybook/react": "7.0.3",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^14.0.0",
@@ -48,7 +49,8 @@
 		"ts-jest": "^29.1.0",
 		"tsup": "^6.7.0",
 		"typescript": "^5.0.4",
-		"typescript-plugin-css-modules": "^5.0.1"
+		"typescript-plugin-css-modules": "^5.0.1",
+		"identity-obj-proxy": "^3.0.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.0",
