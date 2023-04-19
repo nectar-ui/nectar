@@ -1,5 +1,5 @@
 {
-	"extends": "./configs/typescript-config/tsconfig.base.json",
+	"extends": "./tsconfig.base.json",
 	"references": [
 		{ "path": "./packages/core" },
 		{ "path": "./packages/components" },
@@ -8,5 +8,5 @@
 		{ "path": "./packages/palettes" },
 		{ "path": "./packages/nectar" }
 	],
-	"include": ["*.ts", "configs/typescript-config/nectar.d.ts"]
+	"include": ["*.ts"]
 }

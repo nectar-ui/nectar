@@ -7,5 +7,6 @@ export default defineConfig({
 	minify: true,
 	onSuccess: 'tsc -b',
 	format: ['cjs', 'esm'],
-	target: 'es2020'
+	target: 'es2020',
+	sourcemap: true
 })

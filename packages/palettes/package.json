@@ -20,7 +20,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup ./src/index.ts --config ../../configs/tsup-config/tsup.config.ts"
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
 	},
 	"dependencies": {
 		"@radix-ui/colors": "^0.1.8"

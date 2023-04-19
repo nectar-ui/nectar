@@ -1,0 +1,11 @@
+{
+	"extends": "nyc-config-tsx",
+	"all": true,
+	"report-dir": "var/coverage",
+	"extensions": [".ts", ".tsx"],
+	"reporter": ["text", "html"],
+	"temp-dir": "var/coverage/.nyc_output",
+	"include": ["packages/*/src/**/*"],
+	"exclude": ["**/*.stories.{ts,tsx}", "**/index.ts", "**/*.spec.{ts,tsx}"],
+	"check-coverage": false
+}

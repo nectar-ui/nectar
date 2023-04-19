@@ -17,7 +17,7 @@
 		"require": "./dist/index.cjs"
 	},
 	"scripts": {
-		"build": "tsup ./src/index.ts --config ../../configs/tsup-config/tsup.config.ts"
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
 	},
 	"files": [
 		"dist"
