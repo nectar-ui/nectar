@@ -1,1 +1,1 @@
-export * from './navbar.js'
+export * from './Navbar.js'
