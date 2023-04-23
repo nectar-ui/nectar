@@ -3,7 +3,7 @@
 ![](https://badgen.net/github/release/nectar-ui/nectar?color=orange&label=Release)
 [![MIT License](https://badgen.net/badge/License/MIT/blue)](https://choosealicense.com/licenses/mit/)
 ![example workflow](https://github.com/nectar-ui/nectar/actions/workflows/ci.yaml/badge.svg)
-[![codecov](https://codecov.io/gh/nectar-ui/nectar/branch/main/graph/badge.svg)](https://codecov.iggo/gh/nectar-ui/nectar)
+[![codecov](https://codecov.io/gh/nectar-ui/nectar/branch/main/graph/badge.svg)](https://codecov.io/gh/nectar-ui/nectar)
 
 A personal design system by @iambrennanwalsh.
 
