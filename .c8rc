@@ -1,0 +1,12 @@
+{
+	"all": true,
+	"check-coverage": false,
+	"clean": true,
+	"exclude": ["**/*.stories.{ts,tsx}", "**/index.ts", "**/*.spec.{ts,tsx}"],
+	"extends": "nyc-config-tsx",
+	"extensions": [".ts", ".tsx"],
+	"include": ["packages/*/src/**/*"],
+	"report-dir": "var/coverage",
+	"reporter": ["lcov", "html"],
+	"temp-dir": "var/coverage/.nyc_output"
+}
