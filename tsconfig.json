@@ -1,12 +1,15 @@
 {
 	"extends": "./tsconfig.base.json",
 	"references": [
-		{ "path": "./packages/core" },
+		{ "path": "./packages/types" },
 		{ "path": "./packages/components" },
 		{ "path": "./packages/box" },
 		{ "path": "./packages/navbar" },
-		{ "path": "./packages/palettes" },
-		{ "path": "./packages/nectar" }
+		{ "path": "./packages/drawer" },
+		{ "path": "./packages/text" },
+		{ "path": "./packages/primitive" },
+		{ "path": "./packages/nectar" },
+		{ "path": "./packages/tokens" }
 	],
 	"include": ["*.ts"]
 }

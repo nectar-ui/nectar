@@ -23,9 +23,11 @@
 		"dist"
 	],
 	"dependencies": {
+		"@nectar-ui/primitive": "workspace:*",
 		"@nectar-ui/box": "workspace:*",
 		"@nectar-ui/navbar": "workspace:*",
-		"@nectar-ui/palettes": "workspace:*"
+		"@nectar-ui/drawer": "workspace:*",
+		"@nectar-ui/text": "workspace:*"
 	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"

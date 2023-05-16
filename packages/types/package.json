@@ -1,0 +1,29 @@
+{
+	"name": "@nectar-ui/types",
+	"version": "0.1.0",
+	"description": "nectarUi typescript types.",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nectar-ui/nectar.git",
+		"directory": "packages/types"
+	},
+	"access": "public",
+	"type": "module",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts --shims true"
+	},
+	"dependencies": {
+		"csstype": "^3.1.2",
+		"@radix-ui/react-polymorphic": "^0.0.14"
+	}
+}

@@ -1,13 +1,13 @@
 {
-	"name": "@nectar-ui/palettes",
+	"name": "@nectar-ui/primitive",
 	"version": "0.1.0",
-	"description": "nectarUi color palette library.",
+	"description": "The nectarUi primitive component.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nectar-ui/nectar.git",
-		"directory": "packages/palettes"
+		"directory": "packages/primitive"
 	},
 	"access": "public",
 	"type": "module",
@@ -16,13 +16,16 @@
 		"import": "./dist/index.js",
 		"require": "./dist/index.cjs"
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
 	},
+	"files": [
+		"dist"
+	],
 	"dependencies": {
-		"@radix-ui/colors": "^0.1.8"
+		"@nectar-ui/types": "workspace:*"
+	},
+	"peerDependencies": {
+		"react": "^16.8 || ^17 || ^18"
 	}
 }

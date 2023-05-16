@@ -1,0 +1,9 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"declarationDir": "./dist",
+		"rootDir": "./src"
+	},
+	"include": ["./src/**/*", "./src/Drawer.module.css", "../../nectar.d.ts"],
+	"references": [{ "path": "../types" }, { "path": "../primitive" }]
+}

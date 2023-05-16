@@ -23,7 +23,10 @@
 		"dist"
 	],
 	"dependencies": {
-		"@nectar-ui/core": "workspace:*"
+		"@nectar-ui/primitive": "workspace:*",
+		"@nectar-ui/types": "workspace:*",
+		"@nectar-ui/tokens": "workspace:*",
+		"clsx": "^1.1.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"

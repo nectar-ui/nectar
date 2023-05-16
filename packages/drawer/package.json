@@ -1,13 +1,13 @@
 {
-	"name": "@nectar-ui/core",
+	"name": "@nectar-ui/drawer",
 	"version": "0.1.0",
-	"description": "The nectarUi core library.",
+	"description": "The nectarUi drawer component.",
 	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nectar-ui/nectar.git",
-		"directory": "packages/core"
+		"directory": "packages/drawer"
 	},
 	"access": "public",
 	"type": "module",
@@ -16,14 +16,16 @@
 		"import": "./dist/index.js",
 		"require": "./dist/index.cjs"
 	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
 	},
+	"files": [
+		"dist"
+	],
 	"dependencies": {
-		"csstype": "^3.1.2"
+		"@nectar-ui/primitive": "workspace:*",
+		"@nectar-ui/types": "workspace:*",
+		"clsx": "^1.2.1"
 	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"

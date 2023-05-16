@@ -1,0 +1,37 @@
+{
+	"name": "@nectar-ui/text",
+	"version": "0.1.0",
+	"description": "nectarUi text component.",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nectar-ui/nectar.git",
+		"directory": "packages/text"
+	},
+	"access": "public",
+	"type": "module",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
+	},
+	"dependencies": {
+		"@nectar-ui/primitive": "workspace:*",
+		"@nectar-ui/tokens": "workspace:*",
+		"@nectar-ui/types": "workspace:*",
+		"clsx": "^1.2.1"
+	},
+	"devDependencies": {
+		"@nectar-ui/box": "workspace:*"
+	},
+	"peerDependencies": {
+		"react": "^16.8 || ^17 || ^18"
+	}
+}

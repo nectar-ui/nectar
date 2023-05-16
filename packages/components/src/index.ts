@@ -1,3 +1,5 @@
 export * from '@nectar-ui/box'
+export * from '@nectar-ui/drawer'
 export * from '@nectar-ui/navbar'
-export * from '@nectar-ui/palettes'
+export * from '@nectar-ui/primitive'
+export * from '@nectar-ui/text'

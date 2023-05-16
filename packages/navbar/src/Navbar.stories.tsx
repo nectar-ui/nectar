@@ -21,11 +21,11 @@ export const Nav: Story = {
 				<Navbar.item as="a" href="./">
 					Home
 				</Navbar.item>
-				<Navbar.item as="a" href="./">
+				<Navbar.item as="a" href="./about">
 					About
 				</Navbar.item>
-				<Navbar.item as="a" href="./">
-					Contact
+				<Navbar.item as="a" href="./contact">
+					<a href="./">Contact</a>
 				</Navbar.item>
 			</Navbar.section>
 		</Navbar>

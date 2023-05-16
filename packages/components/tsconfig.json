@@ -5,5 +5,11 @@
 		"rootDir": "./src"
 	},
 	"include": ["./src/**/*", "../../nectar.d.ts"],
-	"references": [{ "path": "../navbar" }, { "path": "../box" }, { "path": "../palettes" }]
+	"references": [
+		{ "path": "../navbar" },
+		{ "path": "../text" },
+		{ "path": "../box" },
+		{ "path": "../drawer" },
+		{ "path": "../primitive" }
+	]
 }

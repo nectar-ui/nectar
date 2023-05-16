@@ -1,39 +1,43 @@
-import { Box } from '@nectar-ui/box'
-import type { Component, Props } from '@nectar-ui/core'
+import { Primitive } from '@nectar-ui/primitive'
+import type { Component } from '@nectar-ui/types'
 import { clsx } from 'clsx'
-import { ElementType } from 'react'
-import styles from './navbar.module.css'
+import { ElementType, forwardRef } from 'react'
+import styles from './Navbar.module.css'
 
-export type NavOwnProps = {}
+type NavbarProps = {}
+type NavbarSectionProps = {}
+type NavbarItemProps = {}
 
-export type NavbarProps = Props<'nav', NavOwnProps>
+type NavbarSectionComponent = Component<ElementType, NavbarSectionProps>
+type NavbarItemComponent = Component<ElementType, NavbarItemProps>
 
-export interface NavbarComponents {
-	section: Component<Props<ElementType, {}>>
-	item: Component<Props<ElementType, {}>>
+interface NavbarComponents {
+	section: NavbarSectionComponent
+	item: NavbarItemComponent
 }
-export type NavbarComponent = Component<NavbarProps> & NavbarComponents
 
-export const Navbar: NavbarComponent = ({ children, className, ...props }) => {
+type NavbarComponent = Component<ElementType, NavbarProps> & NavbarComponents
+
+export const Navbar = forwardRef(({ className, children, ...props }, ref) => {
 	return (
-		<Box as="nav" className={clsx(styles.navbar, className)} {...props}>
+		<Primitive as="nav" className={clsx(styles.navbar, className)} ref={ref} {...props}>
 			<div className={styles.container}>{children}</div>
-		</Box>
+		</Primitive>
 	)
-}
+}) as NavbarComponent
 
-Navbar.section = ({ children, className, ...props }) => {
+Navbar.item = forwardRef(({ children, className, ...props }, ref) => {
 	return (
-		<Box className={clsx(styles.section, className)} {...props}>
+		<Primitive as="div" className={clsx(styles.item, className)} ref={ref} {...props}>
 			{children}
-		</Box>
+		</Primitive>
 	)
-}
+})
 
-Navbar.item = ({ children, className, ...props }) => {
+Navbar.section = forwardRef(({ children, className, ...props }, ref) => {
 	return (
-		<Box className={clsx(styles.item, className)} {...props}>
+		<Primitive as="div" ref={ref} className={clsx(styles.section, className)} {...props}>
 			{children}
-		</Box>
+		</Primitive>
 	)
-}
+})
