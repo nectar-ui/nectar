@@ -1,68 +1,75 @@
 .text {
 	color: var(--text-color);
 	font-size: var(--text-size);
-	font-family: var(--text-family);
+	font-family: var(--text-font);
 	font-weight: var(--text-weight);
-	line-height: var(--text-line-height);
-	letter-spacing: var(--text-letter-spacing);
+	line-height: var(--text-leading);
+	letter-spacing: var(--text-kerning);
+	margin-bottom: var(--text-gap);
 }
 
-.caption {
+.small {
 	--text-size: var(--font-sizes-sm);
-	--text-color: var(--text-subtle-color);
+}
+
+.large {
+	--text-size: var(--font-sizes-lg);
+}
+
+.lead {
+	--text-size: var(--font-sizes-lg);
+	--text-color: var(--colors-text-subtle);
 }
 
 .caps {
 	text-transform: uppercase;
-	--text-letter-spacing: var(--letter-spacings-wide);
+	--text-kerning: var(--letter-spacings-wide);
 	--text-weight: var(--font-weights-bold);
 	--text-size: var(--font-sizes-sm);
 }
 
-.lead {
-	font-size: var(--font-sizes-lg);
-	color: var(--text-color-subtle, var(--colors-contrast11));
+.footnote {
+	--text-size: var(--font-sizes-sm);
+	--text-color: var(--text-color-subtle);
 }
 
 .heading {
-	font-weight: var(--font-weights-bold);
-	line-height: var(--line-heights-tight);
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.paragraph {
-}
-
-.footnote {
+	--text-weight: var(--font-weights-bold);
+	--text-line-height: var(--line-heights-tight);
+	--text-margin: 0;
 }
 
 .display {
-	.composes: heading;
-	font-size: var(--font-sizes-7xl);
+	composes: heading;
+	--text-size: var(--font-sizes-7xl);
 }
 
 .h1 {
 	composes: heading;
-	font-size: var(--font-sizes-5xl);
+	--text-size: var(--font-sizes-5xl);
 }
+
 .h2 {
 	composes: heading;
-	font-size: var(--font-sizes-4xl);
+	--text-size: var(--font-sizes-4xl);
 }
+
 .h3 {
 	composes: heading;
-	font-size: var(--font-sizes-3xl);
+	--text-size: var(--font-sizes-3xl);
 }
+
 .h4 {
 	composes: heading;
-	font-size: var(--font-sizes-2xl);
+	text-size: var(--font-sizes-2xl);
 }
+
 .h5 {
 	composes: heading;
-	font-size: var(--font-sizes-xl);
+	text-size: var(--font-sizes-xl);
 }
+
 .h6 {
 	composes: heading;
-	font-size: var(--font-sizes-lg);
+	text-size: var(--font-sizes-lg);
 }

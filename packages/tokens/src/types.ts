@@ -1,4 +1,5 @@
-import { text } from 'stream/consumers'
+import { type PropertyValue } from 'csstype'
+
 import {
 	transitionDelays,
 	transitionDurations,
@@ -7,35 +8,36 @@ import {
 } from './animation.js'
 import { borderStyles, borderWidths, radii } from './border.js'
 import { colors, opacity, shadows } from './colors.js'
-import { zIndices } from './layout.js'
-import { screens, sizings, spacings } from './space.js'
+import { base, box, text } from './components.js'
+import { screens, sizings, spacings, zIndices } from './layout.js'
 import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './typography.js'
 
 /** Animation */
 
-export type TransitionTimingFunctions = keyof typeof transitionTimingFunctions
+export type TransitionTimingFunctions =
+	`--transition-timing-functions-${keyof typeof transitionTimingFunctions}`
 
-export type TransitionProperties = keyof typeof transitionProperties
+export type TransitionProperties = `--transition-properties-${keyof typeof transitionProperties}`
 
-export type TransitionDurations = keyof typeof transitionDurations
+export type TransitionDurations = `--transition-durations-${keyof typeof transitionDurations}`
 
-export type TransitionDelays = keyof typeof transitionDelays
+export type TransitionDelays = `--transition-delays-${keyof typeof transitionDelays}`
 
 /** Borders */
 
-export type Radii = keyof typeof radii
+export type Radii = `--radii-${keyof typeof radii}`
 
-export type BorderWidths = keyof typeof borderWidths
+export type BorderWidths = `--border-widths-${keyof typeof borderWidths}`
 
-export type BorderStyles = keyof typeof borderStyles
+export type BorderStyles = `--border-styles-${keyof typeof borderStyles}`
 
 /** Colors */
 
-export type Shadows = keyof typeof shadows
+export type Shadows = `--shadow-${keyof typeof shadows}`
 
-export type Opacity = keyof typeof opacity
+export type Opacity = `--opacity--${keyof typeof opacity}`
 
-export type Colors = keyof typeof colors
+export type Colors = `--colors-${keyof typeof colors}`
 
 export type BrandColor =
 	| 'contrast'
@@ -64,26 +66,37 @@ export type AliasedPalette = {
 
 /** Layout */
 
-export type ZIndices = keyof typeof zIndices
+export type ZIndices = `--z-indices-${keyof typeof zIndices}`
 
 /** Space */
 
-export type Spacings = keyof typeof spacings
+export type Spacings = `--spacings-${keyof typeof spacings}`
 
-export type Screens = keyof typeof screens
+export type Screens = `--screens-${keyof typeof screens}`
 
-export type Sizings = keyof typeof sizings
+export type Sizings = `--sizings-${keyof typeof sizings}`
 
 /** Typography */
 
-export type Fonts = keyof typeof fonts
+export type Fonts = `--fonts-${keyof typeof fonts}`
 
-export type FontSizes = keyof typeof fontSizes
+export type FontSizes = `--font-sizes-${keyof typeof fontSizes}`
 
-export type FontWeights = keyof typeof fontWeights
+export type FontWeights = `--font-weights-${keyof typeof fontWeights}`
 
-export type LetterSpacings = keyof typeof letterSpacings
+export type LetterSpacings = `--letter-spacings-${keyof typeof letterSpacings}`
 
-export type LineHeights = keyof typeof lineHeights
+export type LineHeights = `--line-heights-${keyof typeof lineHeights}`
 
-export type Text = keyof typeof text
+/** Components */
+
+export type Base = `--base-${keyof typeof base}`
+
+export type Text = `--text-${keyof typeof text}`
+
+export type Box = `--box-${keyof typeof box}`
+
+export type ComponentTokens = Base | Text | Box
+
+export type ComponentStyles = React.CSSProperties &
+	Partial<Record<ComponentTokens, PropertyValue<any>>>

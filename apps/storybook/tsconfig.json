@@ -2,7 +2,8 @@
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
 		"declarationDir": "./dist",
-		"rootDir": "./src"
+		"rootDir": "./src",
+		"allowImportingTsExtensions": true
 	},
 	"include": ["./src/**/*", "../../nectar.d.ts"],
 	"references": [{ "path": "../../packages/nectar" }]

@@ -1,80 +1,82 @@
 import { Primitive } from '@nectar-ui/primitive'
-import {
-	Colors,
-	borderStyles,
-	borderWidths,
-	colors,
-	fonts,
-	radii,
-	shadows,
-	sizings,
-	spacings,
-	zIndices
-} from '@nectar-ui/tokens'
+import { ComponentStyles, tokens } from '@nectar-ui/tokens'
 import { Component } from '@nectar-ui/types'
 import { clsx } from 'clsx'
-import { CSSProperties, forwardRef } from 'react'
+import React, { CSSProperties, forwardRef } from 'react'
 import styles from './Box.module.css'
 
-type BoxElements = 'div' | 'span' | 'section' | 'legend' | 'ul' | 'li'
+export const boxElements = ['div', 'span', 'section', 'legend', 'ul', 'li'] as const
 
-type BoxVariants =
-	| 'primary'
-	| 'primarySubtle'
-	| 'warning'
-	| 'warningSubtle'
-	| 'success'
-	| 'successSubtle'
-	| 'info'
-	| 'infoSubtle'
-	| 'danger'
-	| 'dangerSubtle'
+export const boxVariants = [
+	'contrast',
+	'contrastSubtle',
+	'primary',
+	'primarySubtle',
+	'secondary',
+	'secondarySubtle',
+	'info',
+	'infoSubtle',
+	'warning',
+	'warningSubtle',
+	'danger',
+	'dangerSubtle',
+	'warning',
+	'warningSubtle'
+] as const
+
+export type BoxElements = (typeof boxElements)[number]
+
+export type BoxVariants = (typeof boxVariants)[number]
 
 export interface BoxOwnProps {
-	background?: CSSProperties['background'] | Colors
+	as?: BoxElements
 
-	color?: Colors
+	background?: keyof typeof tokens.colors | React.CSSProperties['background']
 
-	borderColor?: CSSProperties['borderColor'] | keyof typeof colors
-	borderStyle?: CSSProperties['borderStyle'] | keyof typeof borderStyles
-	borderWidth?: CSSProperties['borderWidth'] | keyof typeof borderWidths
+	color?: keyof typeof tokens.colors | React.CSSProperties['color']
 
-	radii?: CSSProperties['borderRadius'] | keyof typeof radii
+	radii?: keyof typeof tokens.radii | React.CSSProperties['borderRadius']
 
-	borderTopWidth?: CSSProperties['borderWidth'] | keyof typeof borderWidths
-	borderRightWidth?: CSSProperties['borderWidth'] | keyof typeof borderWidths
-	borderBottomWidth?: CSSProperties['borderWidth'] | keyof typeof borderWidths
-	borderLeftWidth?: CSSProperties['borderWidth'] | keyof typeof borderWidths
+	borderWidth?: keyof typeof tokens.borderWidths | React.CSSProperties['borderWidth']
+	borderStyle?: keyof typeof tokens.borderStyles | React.CSSProperties['borderStyle']
+	borderColor?: keyof typeof tokens.colors | React.CSSProperties['borderColor']
 
-	family?: CSSProperties['fontFamily'] | keyof typeof fonts
+	font?: keyof typeof tokens.fonts | React.CSSProperties['fontFamily']
+	fontSize?: keyof typeof tokens.fontSizes | React.CSSProperties['fontSize']
+	fontWeight?: keyof typeof tokens.fontWeights | React.CSSProperties['fontWeight']
+	lineHeight?: keyof typeof tokens.lineHeights | React.CSSProperties['lineHeight']
+	letterSpacing?: keyof typeof tokens.letterSpacings | React.CSSProperties['letterSpacing']
 
-	minHeight?: CSSProperties['minHeight'] | keyof typeof sizings
-	minWidth?: CSSProperties['minWidth'] | keyof typeof sizings
-	maxWidth?: CSSProperties['maxWidth'] | keyof typeof sizings
-	width?: CSSProperties['width'] | keyof typeof sizings
+	minHeight?: keyof typeof tokens.sizings | CSSProperties['minHeight']
+	minWidth?: keyof typeof tokens.sizings | CSSProperties['minWidth']
+	maxWidth?: keyof typeof tokens.sizings | CSSProperties['maxWidth']
+	width?: keyof typeof tokens.sizings | CSSProperties['width']
 
+	overflow?: React.CSSProperties['overflow']
 	overflowX?: React.CSSProperties['overflowX']
 	overflowY?: React.CSSProperties['overflowY']
 
-	padding?: CSSProperties['padding'] | keyof typeof spacings
-	paddingTop?: CSSProperties['paddingTop'] | keyof typeof spacings
-	paddingBottom?: CSSProperties['paddingBottom'] | keyof typeof spacings
-	paddingLeft?: CSSProperties['paddingLeft'] | keyof typeof spacings
-	paddingRight?: CSSProperties['paddingRight'] | keyof typeof spacings
-	paddingX?: CSSProperties['padding'] | keyof typeof spacings
-	paddingY?: CSSProperties['padding'] | keyof typeof spacings
+	padding?: React.CSSProperties['padding'] | keyof typeof tokens.spacings
+	paddingTop?: React.CSSProperties['paddingTop'] | keyof typeof tokens.spacings
+	paddingBottom?: React.CSSProperties['paddingBottom'] | keyof typeof tokens.spacings
+	paddingLeft?: React.CSSProperties['paddingLeft'] | keyof typeof tokens.spacings
+	paddingRight?: React.CSSProperties['paddingRight'] | keyof typeof tokens.spacings
+	paddingX?: React.CSSProperties['padding'] | keyof typeof tokens.spacings
+	paddingY?: React.CSSProperties['padding'] | keyof typeof tokens.spacings
 
-	shadow?: CSSProperties['boxShadow'] | keyof typeof shadows
+	margin?: React.CSSProperties['margin'] | keyof typeof tokens.spacings
+
+	shadow?: React.CSSProperties['boxShadow'] | keyof typeof tokens.shadows
 
 	position?: React.CSSProperties['position']
-	top?: CSSProperties['top'] | keyof typeof spacings
-	bottom?: CSSProperties['bottom'] | keyof typeof spacings
-	left?: CSSProperties['left'] | keyof typeof spacings
-	right?: CSSProperties['right'] | keyof typeof spacings
+	top?: React.CSSProperties['top'] | keyof typeof tokens.spacings
+	bottom?: React.CSSProperties['bottom'] | keyof typeof tokens.spacings
+	left?: React.CSSProperties['left'] | keyof typeof tokens.spacings
+	right?: React.CSSProperties['right'] | keyof typeof tokens.spacings
 
 	variant?: BoxVariants
 
-	zIndex?: CSSProperties['zIndex'] | keyof typeof zIndices
+	zIndex?: React.CSSProperties['zIndex'] | keyof typeof tokens.zIndices
 }
 
 export type BoxComponent = Component<BoxElements, BoxOwnProps>
@@ -85,100 +87,168 @@ export const Box: BoxComponent = forwardRef(
 			as = 'div',
 			variant,
 			children,
-			//background,
-			//color,
-			//borderColor,
-			//borderStyle,
-			//borderWidth,
-			//borderBottomWidth,
-			//borderTopWidth,
-			//borderLeftWidth,
-			//borderRightWidth,
-			//radii,
-			//family,
-			//minHeight,
-			//minWidth,
-			//maxWidth,
-			//overflowX,
-			//overflowY,
-			//padding,
-			//paddingTop,
-			//paddingBottom,
-			//paddingLeft,
-			//paddingRight,
-			//shadow,
-			//width,
-			//position,
-			//top,
-			//bottom,
-			//right,
-			//left,
-			//zIndex,
+			className,
+			background,
+			color,
+			font,
+			fontSize,
+			fontWeight,
+			lineHeight,
+			letterSpacing,
+
+			borderColor,
+			borderStyle,
+			borderWidth,
+			radii,
+
+			minHeight,
+			minWidth,
+			maxWidth,
+			width,
+			overflow,
+			overflowX,
+			overflowY,
+			padding,
+			paddingTop,
+			paddingBottom,
+			paddingLeft,
+			paddingRight,
+			paddingX,
+			paddingY,
+			margin,
+			shadow,
+			position,
+			top,
+			bottom,
+			right,
+			left,
+			zIndex,
 			...restProps
 		},
 		ref
 	) => {
-		/*const style = {
-			'--box-color': color ? `var(--colors-${color})` : undefined,
-			'--box-background': background ? `var(--colors-${background})` : undefined,
-			'--box-border-color': borderColor
-				? borderColor === 'transparent'
-					? 'transparent'
-					: `var(--color-${borderColor})`
-				: undefined,
-			'--box-border-style': borderStyle,
-			'--box-border-radius': warn ? `var(--border-radius-${borderRadius})` : undefined,
-			'--box-border-radius-end-start': borderRadiusEndStart
-				? `var(--border-radius-${borderRadiusEndStart})`
-				: undefined,
-			'--box-border-radius-end-end': borderRadiusEndEnd
-				? `var(--border-radius-${borderRadiusEndEnd})`
-				: undefined,
-			'--box-border-radius-start-start': borderRadiusStartStart
-				? `var(--border-radius-${borderRadiusStartStart})`
-				: undefined,
-			'--box-border-radius-start-end': borderRadiusStartEnd
-				? `var(--border-radius-${borderRadiusStartEnd})`
-				: undefined,
-			'--box-border-width': borderWidth ? `var(--border-width-${borderWidth})` : undefined,
-			'--box-border-top-width': borderBlockStartWidth
-				? `var(--border-width-${borderBlockStartWidth})`
-				: undefined,
-			'--box-border-bottom-width': borderBlockEndWidth
-				? `var(--border-width-${borderBlockEndWidth})`
-				: undefined,
-			'--box-border-inline-start-width': borderInlineStartWidth
-				? `var(--border-width-${borderInlineStartWidth})`
-				: undefined,
-			'--box-border-inline-end-width': borderInlineEndWidth
-				? `var(--border-width-${borderInlineEndWidth})`
-				: undefined,
-			'--box-min-height': minHeight,
-			'--box-min-width': minWidth,
-			'--box-max-width': maxWidth,
-			'--box-outline-color': outlineColor ? `var(--color-${outlineColor})` : undefined,
-			'--box-outline-style': outlineStyleValue,
-			'--box-outline-width': outlineWidth ? `var(--border-width-${outlineWidth})` : undefined,
-			'--box-overflow-x': overflowX,
-			'--box-overflow-y': overflowY,
-			...getResponsiveProps('box', 'padding-block-end', 'space', paddingBlockEnd || padding),
-			...getResponsiveProps('box', 'padding-block-start', 'space', paddingBlockStart || padding),
-			...getResponsiveProps('box', 'padding-inline-start', 'space', paddingInlineStart || padding),
-			...getResponsiveProps('box', 'padding-inline-end', 'space', paddingInlineEnd || padding),
-			'--box-shadow': shadow ? `var(--shadow-${shadow})` : undefined,
-			'--box-width': width,
-			position,
-			'--box-inset-block-start': insetBlockStart ? `var(--space-${insetBlockStart})` : undefined,
-			'--box-inset-block-end': insetBlockEnd ? `var(--space-${insetBlockEnd})` : undefined,
-			'--box-inset-inline-start': insetInlineStart ? `var(--space-${insetInlineStart})` : undefined,
-			'--box-inset-inline-end': insetInlineEnd ? `var(--space-${insetInlineEnd})` : undefined,
-			zIndex,
-			opacity
-		} as React.CSSProperties
-		*/
+		const style: ComponentStyles = {}
+		if (color) {
+			style['--text-color'] = color in tokens.colors ? `var(--colors-${color})` : color
+		}
+		if (font) {
+			style['--text-font'] = font in tokens.fonts ? `var(--fonts-${font})` : font
+		}
+		if (fontSize) {
+			style['--text-size'] =
+				fontSize in tokens.fontSizes ? `var(--font-sizes-${fontSize})` : fontSize
+		}
+		if (fontWeight) {
+			style['--text-weight'] =
+				fontWeight in tokens.fontWeights ? `var(--font-weights-${fontWeight})` : fontWeight
+		}
+		if (lineHeight) {
+			style['--text-line-height'] =
+				lineHeight in tokens.lineHeights ? `var(--line-heights-${lineHeight})` : lineHeight
+		}
+		if (letterSpacing) {
+			style['--text-letter-spacing'] =
+				letterSpacing in tokens.letterSpacings
+					? `var(--letter-spacings-${letterSpacing})`
+					: letterSpacing
+		}
+		if (background) {
+			style['--box-background'] =
+				background in tokens.colors ? `var(--colors-${background})` : background
+		}
+		if (borderColor) {
+			style['--box-border-color'] =
+				borderColor in tokens.colors ? `var(--colors-${borderColor})` : borderColor
+		}
+		if (borderStyle) {
+			style['--box-border-style'] =
+				borderStyle in tokens.borderStyles ? `var(--border-styles-${borderStyle})` : borderStyle
+		}
+		if (borderWidth) {
+			style['--box-border-width'] =
+				borderWidth in tokens.borderWidths ? `var(--border-widths-${borderWidth})` : borderWidth
+		}
+		if (radii) {
+			style['--box-radii'] = radii in tokens.radii ? `var(--radii-${radii})` : radii
+		}
+		if (shadow) {
+			style['--box-shadow'] = shadow in tokens.shadows ? `var(--shadows-${shadow})` : shadow
+		}
+
+		if (minHeight) {
+			style['minHeight'] = minHeight in tokens.sizings ? `var(--sizings-${minHeight})` : minHeight
+		}
+		if (minWidth) {
+			style['minWidth'] = minWidth in tokens.sizings ? `var(--sizings-${minWidth})` : minWidth
+		}
+		if (maxWidth) {
+			style['maxWidth'] = maxWidth in tokens.sizings ? `var(--sizings-${maxWidth})` : maxWidth
+		}
+		if (width) {
+			style['width'] = width in tokens.sizings ? `var(--sizings-${width})` : width
+		}
+		if (overflow) {
+			style['overflow'] = overflow
+		}
+		if (overflowX) {
+			style['overflowX'] = overflowX
+		}
+		if (overflowY) {
+			style['overflowY'] = overflowY
+		}
+		if (margin) {
+			style['--box-gap'] = margin in tokens.spacings ? `var(--spacings-${margin})` : margin
+		}
+		if (padding) {
+			style['padding'] = padding in tokens.spacings ? `var(--spacings-${padding})` : padding
+		}
+		if (paddingTop) {
+			style['paddingTop'] =
+				paddingTop in tokens.spacings ? `var(--spacings-${paddingTop})` : paddingTop
+		}
+		if (paddingLeft) {
+			style['paddingLeft'] =
+				paddingLeft in tokens.spacings ? `var(--spacings-${paddingLeft})` : paddingLeft
+		}
+		if (paddingRight) {
+			style['paddingRight'] =
+				paddingRight in tokens.spacings ? `var(--spacings-${paddingRight})` : paddingRight
+		}
+		if (paddingBottom) {
+			style['paddingBottom'] =
+				paddingBottom in tokens.spacings ? `var(--spacings-${paddingBottom})` : paddingBottom
+		}
+		if (paddingX) {
+			style['paddingLeft'] = paddingX in tokens.spacings ? `var(--spacings-${paddingX})` : paddingX
+			style['paddingRight'] = style['paddingLeft']
+		}
+		if (paddingY) {
+			style['paddingTop'] = paddingY in tokens.spacings ? `var(--spacings-${paddingY})` : paddingY
+			style['paddingBottom'] = style['paddingTop']
+		}
+		if (position) {
+			style['position'] = position
+		}
+		if (top) {
+			style['top'] = top in tokens.sizings ? `var(--sizings-${top})` : top
+		}
+		if (bottom) {
+			style['bottom'] = bottom in tokens.sizings ? `var(--sizings-${bottom})` : bottom
+		}
+		if (left) {
+			style['left'] = left in tokens.sizings ? `var(--sizings-${left})` : left
+		}
+		if (right) {
+			style['right'] = right in tokens.sizings ? `var(--sizings-${right})` : right
+		}
+		if (zIndex) {
+			style['zIndex'] = zIndex in tokens.zIndices ? `var(--z-indices-${zIndex})` : zIndex
+		}
+
+		const classNames = clsx(styles.box, variant && styles[variant], className)
 
 		return (
-			<Primitive as={as} className={clsx(styles.box, variant)} ref={ref} {...restProps}>
+			<Primitive as={as} ref={ref} className={classNames} style={style} {...restProps}>
 				{children}
 			</Primitive>
 		)

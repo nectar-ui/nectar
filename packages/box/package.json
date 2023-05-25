@@ -28,6 +28,9 @@
 		"@nectar-ui/tokens": "workspace:*",
 		"clsx": "^1.1.1"
 	},
+	"devDependencies": {
+		"@nectar-ui/text": "workspace:*"
+	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"
 	}

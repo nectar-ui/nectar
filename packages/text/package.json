@@ -28,9 +28,6 @@
 		"@nectar-ui/types": "workspace:*",
 		"clsx": "^1.2.1"
 	},
-	"devDependencies": {
-		"@nectar-ui/box": "workspace:*"
-	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"
 	}

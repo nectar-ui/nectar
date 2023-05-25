@@ -1,12 +1,10 @@
 export const fonts = {
-	default: 'var(--fonts-sans)',
 	sans: "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
 	serif: "ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif",
 	mono: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', 'monospace'"
 }
 
 export const fontWeights = {
-	default: 'var(--font-weights-normal)',
 	thin: '100',
 	extralight: '200',
 	light: '300',
@@ -19,7 +17,6 @@ export const fontWeights = {
 }
 
 export const fontSizes = {
-	default: 'var(--font-sizes-md)',
 	xs: '0.75rem',
 	sm: '0.875rem',
 	md: '1rem',
@@ -36,7 +33,7 @@ export const fontSizes = {
 }
 
 export const letterSpacings = {
-	default: 'var(--letter-spacings-normal)',
+	tightest: '-0.1',
 	tighter: '-0.05em',
 	tight: '-0.025em',
 	normal: '0em',
@@ -46,22 +43,10 @@ export const letterSpacings = {
 }
 
 export const lineHeights = {
-	default: 'var(--line-heights-normal)',
 	none: '1',
 	tight: '1.25',
 	snug: '1.375',
 	normal: '1.5',
 	relaxed: '1.625',
 	loose: '2'
-}
-
-export const text = {
-	color: 'var(--colors-contrast-text)',
-	'subtle-color': 'var(--colors-contrast-subtle-text)',
-	'contrast-color': 'var(--colors-contrast-base)',
-	size: 'var(--font-sizes-default)',
-	family: 'var(--fonts-default)',
-	weight: 'var(--font-weights-default)',
-	'line-height': 'var(--line-heights-default)',
-	'letter-spacing': 'var(--letter-spacings-default)'
 }

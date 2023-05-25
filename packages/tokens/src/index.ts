@@ -6,9 +6,9 @@ import {
 } from './animation.js'
 import { borderStyles, borderWidths, radii } from './border.js'
 import { colors, darkColors, opacity, shadows } from './colors.js'
-import { zIndices } from './layout.js'
-import { screens, sizings, spacings } from './space.js'
-import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights, text } from './typography.js'
+import { componentTokens } from './components.js'
+import { screens, sizings, spacings, zIndices } from './layout.js'
+import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './typography.js'
 
 export const tokens = {
 	colors: colors,
@@ -30,19 +30,20 @@ export const tokens = {
 	borderWidths: borderWidths,
 	borderStyles: borderStyles,
 	zIndices: zIndices,
-	text: text
+	...componentTokens
 }
 
 export const darkTokens = {
-	colors: darkColors
+	colors: darkColors,
+	...componentTokens
 }
 
 export * from './animation.js'
 export * from './border.js'
 export * from './colors.js'
+export * from './components.js'
 export * from './layout.js'
 export * from './mediaQueries.js'
-export * from './space.js'
 export * from './types.js'
 export * from './typography.js'
 

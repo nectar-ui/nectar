@@ -56,7 +56,8 @@ const lightPalettes = {
 	...palettes.sand,
 	...palettes.sandA,
 	...palettes.sage,
-	...palettes.sageA
+	...palettes.sageA,
+	...palettes.blackA
 }
 
 const darkPalettes = {
@@ -118,103 +119,121 @@ const darkPalettes = {
 	...palettes.sageDarkA
 }
 
-export const colors = {
-	...lightPalettes,
-	'contrast-base': 'var(--colors-slate1)',
+const themeColors = {
+	// Contrast Theme Colors
+	'contrast-contrast': 'var(--colors-slate1)',
 	'contrast-bg-subtle': 'var(--colors-slate2)',
 	'contrast-bg': 'var(--colors-slate3)',
 	'contrast-bg-hover': 'var(--colors-slate4)',
 	'contrast-bg-active': 'var(--colors-slate5)',
-	'contrast-line': 'var(--colors-slate6)',
+	'contrast-border-subtle': 'var(--colors-slate6)',
 	'contrast-border': 'var(--colors-slate7)',
 	'contrast-border-hover': 'var(--colors-slate8)',
-	'contrast-solid': 'var(--colors-slate9)',
-	'contrast-solid-hover': 'var(--colors-slate10)',
-	'contrast-subtle-text': 'var(--colors-slate11)',
+	contrast: 'var(--colors-slate9)',
+	'contrast-hover': 'var(--colors-slate10)',
+	'contrast-text-subtle': 'var(--colors-slate11)',
 	'contrast-text': 'var(--colors-slate12)',
 	'contrast-shadow': 'var(--colors-slate-a9)',
-	'primary-base': 'var(--colors-amber1)',
+
+	// Primary Theme Colors
+	'primary-contrast': 'var(--colors-amber1)',
 	'primary-bg-subtle': 'var(--colors-amber2)',
 	'primary-bg': 'var(--colors-amber3)',
 	'primary-bg-hover': 'var(--colors-amber4)',
 	'primary-bg-active': 'var(--colors-amber5)',
-	'primary-line': 'var(--colors-amber6)',
+	'primary-border-subtle': 'var(--colors-amber6)',
 	'primary-border': 'var(--colors-amber7)',
 	'primary-border-hover': 'var(--colors-amber8)',
-	'primary-solid': 'var(--colors-amber9)',
-	'primary-solid-hover': 'var(--colors-amber10)',
-	'primary-subtle-text': 'var(--colors-amber11)',
+	primary: 'var(--colors-amber9)',
+	'primary-hover': 'var(--colors-amber10)',
+	'primary-text-subtle': 'var(--colors-amber11)',
 	'primary-text': 'var(--colors-amber12)',
 	'primary-shadow': 'var(--colors-amber-a9)',
-	'secondary-base': 'var(--colors-sky1)',
+
+	// Secondary Theme Colors
+	'secondary-contrast': 'var(--colors-sky1)',
 	'secondary-bg-subtle': 'var(--colors-sky2)',
 	'secondary-bg': 'var(--colors-sky3)',
 	'secondary-bg-hover': 'var(--colors-sky4)',
 	'secondary-bg-active': 'var(--colors-sky5)',
-	'secondary-line': 'var(--colors-sky6)',
+	'secondary-border-subtle': 'var(--colors-sky6)',
 	'secondary-border': 'var(--colors-sky7)',
 	'secondary-border-hover': 'var(--colors-sky8)',
-	'secondary-solid': 'var(--colors-sky9)',
-	'secondary-solid-hover': 'var(--colors-sky10)',
-	'secondary-subtle-text': 'var(--colors-sky11)',
+	secondary: 'var(--colors-sky9)',
+	'secondary-hover': 'var(--colors-sky10)',
+	'secondary-text-subtle': 'var(--colors-sky11)',
 	'secondary-text': 'var(--colors-sky12)',
 	'secondary-shadow': 'var(--colors-sky-a9)',
-	'warning-base': 'var(--colors-yellow1)',
+
+	// Warning Context Colors
+	'warning-contrast': 'var(--colo1qrs-yellow1)',
 	'warning-bg-subtle': 'var(--colors-yellow2)',
 	'warning-bg': 'var(--colors-yellow3)',
 	'waring-bg-hover': 'var(--colors-yellow4)',
 	'warning-bg-active': 'var(--colors-yellow5)',
-	'warning-line': 'var(--colors-yellow6)',
+	'warning-border-subtle': 'var(--colors-yellow6)',
 	'warning-border': 'var(--colors-yellow7)',
 	'warning-border-hover': 'var(--colors-yellow8)',
-	'warning-solid': 'var(--colors-yellow9)',
-	'warning-solid-hover': 'var(--colors-yellow10)',
-	'warning-subtle-text': 'var(--colors-yellow11)',
+	warning: 'var(--colors-yellow9)',
+	'warning-hover': 'var(--colors-yellow10)',
+	'warning-text-subtle': 'var(--colors-yellow11)',
 	'warning-text': 'var(--colors-yellow12)',
 	'warning-shadow': 'var(--colors-yellow-a9)',
-	'danger-base': 'var(--colors-red1)',
+
+	// Danger Context Colors
+	'danger-contrast': 'var(--colors-red1)',
 	'danger-bg-subtle': 'var(--colors-red2)',
 	'danger-bg': 'var(--colors-red3)',
 	'danger-bg-hover': 'var(--colors-red4)',
 	'danger-bg-active': 'var(--colors-red5)',
-	'danger-line': 'var(--colors-red6)',
+	'danger-border-subtle': 'var(--colors-red6)',
 	'danger-border': 'var(--colors-red7)',
 	'danger-border-hover': 'var(--colors-red8)',
-	'danger-solid': 'var(--colors-red9)',
-	'danger-solid-hover': 'var(--colors-red10)',
-	'danger-subtle-text': 'var(--colors-red11)',
+	danger: 'var(--colors-red9)',
+	'danger-hover': 'var(--colors-red10)',
+	'danger-text-subtle': 'var(--colors-red11)',
 	'danger-text': 'var(--colors-red12)',
 	'danger-shadow': 'var(--colors-red-a9)',
-	'success-base': 'var(--colors-green1)',
+
+	// Succcess Context Colors
+	'success-contrast': 'var(--colors-green1)',
 	'success-bg-subtle': 'var(--colors-green2)',
 	'success-bg': 'var(--colors-green3)',
 	'success-bg-hover': 'var(--colors-green4)',
 	'success-bg-active': 'var(--colors-green5)',
-	'success-line': 'var(--colors-green6)',
+	'success-border-subtle': 'var(--colors-green6)',
 	'success-border': 'var(--colors-green7)',
 	'success-border-hover': 'var(--colors-green8)',
-	'success-solid': 'var(--colors-green9)',
-	'success-solid-hover': 'var(--colors-green10)',
-	'success-subtle-text': 'var(--colors-green11)',
+	success: 'var(--colors-green9)',
+	'success-hover': 'var(--colors-green10)',
+	'success-text-subtle': 'var(--colors-green11)',
 	'success-text': 'var(--colors-green12)',
 	'success-shadow': 'var(--colors-green-a9)',
-	'info-base': 'var(--colors-blue1)',
+
+	// Info Context Colors
+	'info-contrast': 'var(--colors-blue1)',
 	'info-bg-subtle': 'var(--colors-blue2)',
 	'info-bg': 'var(--colors-blue3)',
 	'info-bg-hover': 'var(--colors-blue4)',
 	'info-bg-active': 'var(--colors-blue5)',
-	'info-line': 'var(--colors-blue6)',
+	'info-border-subtle': 'var(--colors-blue6)',
 	'info-border': 'var(--colors-blue7)',
 	'info-border-hover': 'var(--colors-blue8)',
-	'info-solid': 'var(--colors-blue9)',
-	'info-solid-hover': 'var(--colors-blue10)',
-	'info-subtle-text': 'var(--colors-blue11)',
+	info: 'var(--colors-blue9)',
+	'info-hover': 'var(--colors-blue10)',
+	'info-text-subtle': 'var(--colors-blue11)',
 	'info-text': 'var(--colors-blue12)',
 	'info-shadow': 'var(--colors-blue-a9)'
 }
 
+export const colors = {
+	...lightPalettes,
+	...themeColors
+}
+
 export const darkColors = {
-	...darkPalettes
+	...darkPalettes,
+	...themeColors
 }
 
 export const opacity = {
@@ -236,12 +255,13 @@ export const opacity = {
 }
 
 export const shadows = {
-	xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-	sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-	md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-	lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-	xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-	'2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-	inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+	color: 'var(--colors-black-a9)',
+	xs: '0 1px 2px 0 var(--shadows-color)',
+	sm: '0 1px 3px 0 var(--shadows-color), 0 1px 2px -1px var(--shadows-color)',
+	md: '0 4px 6px -1px var(--shadows-color), 0 2px 4px -2px var(--shadows-color)',
+	lg: '0 10px 15px -3px var(--shadows-color), 0 4px 6px -4px var(--shadows-color)',
+	xl: '0 20px 25px -5px var(--shadows-color), 0 8px 10px -6px var(--shadows-color)',
+	'2xl': '0 25px 50px -12px var(--shadows-color)',
+	inner: 'inset 0 2px 4px 0 var(--shadows-color)',
 	none: 'none'
 }
