@@ -20,8 +20,10 @@
 	max-width: var(--navbar-container-max-width);
 	display: flex;
 	justify-content: space-between;
+}
 
-	@media (--sm) {
+@media (--sm) {
+	.container {
 		padding: 0 var(--spacing-block);
 	}
 }
@@ -47,9 +49,9 @@
 	padding: 0 var(--spacing-block);
 	transition: background-color 0.3s;
 	cursor: pointer;
+}
 
-	&:hover {
-		background-color: var(--navbar-item-hover-bg);
-		color: var(--navbar-item-hover-color);
-	}
+.item:hover {
+	background-color: var(--navbar-item-hover-bg);
+	color: var(--navbar-item-hover-color);
 }

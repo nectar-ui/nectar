@@ -1,0 +1,76 @@
+.text {
+	color: var(--text-color);
+	font-size: var(--text-size);
+	font-family: var(--text-font);
+	font-weight: var(--text-weight);
+	line-height: var(--text-line-height);
+	letter-spacing: var(--text-letter-spacing);
+	margin-bottom: var(--text-gap);
+}
+
+.small {
+	--text-size: var(--font-sizes-sm);
+}
+
+.large {
+	--text-size: var(--font-sizes-lg);
+}
+
+.lead {
+	--text-size: var(--font-sizes-lg);
+	--text-color: var(--text-color-subtle);
+}
+
+.caps {
+	text-transform: uppercase;
+	--text-kerning: var(--letter-spacings-wide);
+	--text-weight: var(--font-weights-bold);
+	--text-size: var(--font-sizes-sm);
+}
+
+.footnote {
+	--text-size: var(--font-sizes-sm);
+	--text-color: var(--text-color-subtle);
+}
+
+.heading {
+	--text-weight: var(--font-weights-bold);
+	--text-line-height: var(--line-heights-tight);
+	--text-gap: 0;
+}
+
+.display {
+	composes: heading;
+	text-transform: uppercase;
+	--text-size: var(--font-sizes-7xl);
+}
+
+.h1 {
+	composes: heading;
+	--text-size: var(--font-sizes-5xl);
+}
+
+.h2 {
+	composes: heading;
+	--text-size: var(--font-sizes-4xl);
+}
+
+.h3 {
+	composes: heading;
+	--text-size: var(--font-sizes-3xl);
+}
+
+.h4 {
+	composes: heading;
+	text-size: var(--font-sizes-2xl);
+}
+
+.h5 {
+	composes: heading;
+	text-size: var(--font-sizes-xl);
+}
+
+.h6 {
+	composes: heading;
+	text-size: var(--font-sizes-lg);
+}

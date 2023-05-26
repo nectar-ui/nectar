@@ -1,0 +1,29 @@
+{
+	"name": "@nectar-ui/tokens",
+	"version": "0.1.0",
+	"description": "The nectarUi design tokens.",
+	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nectar-ui/nectar.git",
+		"directory": "packages/tokens"
+	},
+	"access": "public",
+	"type": "module",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs"
+	},
+	"scripts": {
+		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"@radix-ui/colors": "^0.1.0",
+		"csstype": "^3.1.2"
+	}
+}

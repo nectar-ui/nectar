@@ -1,24 +1,9 @@
-import type { Selectors } from '@nectar-ui/core'
 import type { Root } from 'postcss'
-import { camelCaseReplacer } from '../replacer/index.js'
+import type { Selectors } from '../types.js'
 
 const SELECTOR_REGEX = /:--[A-z][\w-]*/g
 
-export interface PreparedSelectors {
-	[index: string]: string
-}
-
-export function prepareSelectors(selectors: Selectors): PreparedSelectors {
-	const css: PreparedSelectors = {}
-	for (let key in selectors) {
-		const value = selectors[key]
-		key = `:--${camelCaseReplacer(key)}`
-		css[key] = value
-	}
-	return css
-}
-
-export function processSelectors(selectors: PreparedSelectors): (css: Root) => void {
+export function processSelectors(selectors: Selectors): (css: Root) => void {
 	return css => {
 		css.walkRules(rule => {
 			const updatedSelectors: string[] = []

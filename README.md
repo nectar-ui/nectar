@@ -11,14 +11,97 @@ A personal design system by @iambrennanwalsh.
 
 ## Table Of Contents
 
-1. Get Started
-2. Configurationt
+1. Overview
+2. Get Started
+3. Config
+
+---
+
+## Packages
+
+1. @nectar-ui/nectar
+
+   - Re-exports all packages.
+
+2. @nectar-ui/types
+
+   - Declares all typescript types.
+
+3. @nectar-ui/provider
+   - A context provider, hook, and higher order component.
+   - Accepts your theme object, and converts the tokens to css custom properties, creates tokens,
+
+## Overview
+
+nectarUi is a design system built on top of PostCss and Css Modules.
+
+`nectar` > types > components > postcss-plugin >
+
+The configuration file features the following api.
+
+```json
+{
+	tokens: { // Your design tokens. Will be transformed into css custom properties.
+		base: {}, // Custom properties attached to `:root` selector.
+		dark: {} // Custom properties attached to `.dark` selector.
+	},
+	mediaQueries: {  // Custom media queries.
+		md: "min-width: 768px" // Use via `@media(--md)` syntax.
+	},
+	selectors: { // Custom selectors.
+		heading: "h1, h2, h3, h4, h5, h6" // Use via `:--heading {}` syntax.
+	},
+	properties: { // Custom css properties.
+		mt: (value: CSS.Properties['marginTop']) => ({ // Use just like any other css property.
+			marginTop: value
+		})
+	},
+	settings: {
+		styleReset: true, // Inject css reset.
+		outputPath: "public/build/styles.css", // Path to output compiled css.
+		minify: true, // Minimize output css.
+		prefix: true, // Utilize autoprefixer.
+		theme: "system" // Method to determine current theme. Can be "system", "localStorage", or "cookie".
+	}
+}
+```
+
+All components compose the Box component. The box component has the following prop api.
+
+```typescript
+interface BoxProps<Variants extends string[]> {
+	as?: React.ElementType
+	css?: CssObject
+	variant?: Variants[keyof Variants]
+	className?: string
+	children?: React.ReactNode
+}
+```
+
+The `css` prop expects a css object. To enable dynamic styling, include the context key in your css object.
+
+```tsx
+const El = (
+	<Box
+		css={{
+			backgroundColor: 'var(--colors-contrast1)',
+			color: 'var(--colors-contrast12)',
+
+			'&.open': {
+				backgroundColor: 'transparent'
+			}
+		}}
+	/>
+)
+```
+
+The above will be hashed into a unique className that will be appended to the components existing className if there is one. Then the css prop is removed, and its content appened to a style sheet.
 
 ---
 
 ## Get Started
 
-Install, setup, and customize the NectarUi library. NectarUi is built on PostCSS.
+Install, setup, and customize the NectarUi library.
 
 1. Install `@nectar-ui/nectar` and it's peer dependencies via your perferred package manger (npm, yarn, pnpm).
 
@@ -26,9 +109,9 @@ Install, setup, and customize the NectarUi library. NectarUi is built on PostCSS
 npm install @nectar-ui/nectar postcss@^8
 ```
 
-2. Create your config file. [Read more about the config](#config).
+2. Configure NectarUi via your `nectar.config.js` file. [Read more about the config](#config).
 
-3. Add `@nectar-ui/nectar` to your PostCss config. You must provide the path to your config when its is not in the root.
+3. Add `@nectar-ui/nectar` to your PostCss config. If you You must provide the path to your config when its is not in the root.
 
 ```json
 {
@@ -136,19 +219,3 @@ You can now use the aliased syntax in your css:
 	font-weight: bold;
 }
 ```
-
-1. Install
-
-```
-{
-	tokens: {
-		base: {}
-	},
-	mediaQueries: {},
-	selectors: {}
-}
-```
-
-2. Install the nectar-ui/nectar package.
-
-3. Add package to your postcss configuration.

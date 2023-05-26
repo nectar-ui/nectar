@@ -1,4 +1,4 @@
-export { prepareMediaQueries, processMediaQueries } from './mediaQueries.js'
-export { processReset } from './reset.js'
-export { prepareSelectors, processSelectors } from './selectors.js'
-export { prepareTokens, processTokens } from './tokens.js'
+export { processMediaQueries } from './mediaQueries.js'
+export { processProperties } from './properties.js'
+export { processSelectors } from './selectors.js'
+export { processStyles } from './styles.js'

@@ -23,8 +23,7 @@
 		"dist"
 	],
 	"dependencies": {
-		"@nectar-ui/box": "workspace:*",
-		"@nectar-ui/core": "workspace:*",
+		"@nectar-ui/primitive": "workspace:*",
 		"clsx": "^1.2.1"
 	},
 	"peerDependencies": {
