@@ -11,12 +11,12 @@
 	transition: background-color var(--drawer-transition);
 	pointer-events: none;
 	mt: 3.5rem;
+}
 
-	&.open {
-		background-color: var(--drawer-bg);
-		z-index: 100;
-		pointer-events: auto;
-	}
+.drawer.open {
+	background-color: var(--drawer-bg);
+	z-index: 100;
+	pointer-events: auto;
 }
 
 .overlay {
@@ -37,23 +37,25 @@
 	height: 100%;
 	transform: translateX(-100%);
 	transition: transform var(--drawer-transition);
+}
 
-	@media (min-width: 768px) {
+@media (min-width: 768px) {
+	.content {
 		--drawer-content-width: 300px;
 	}
+}
 
-	.open & {
-		transform: translateX(0);
-		box-shadow: var(--drawer-content-shadow);
-	}
+.open .content {
+	transform: translateX(0);
+	box-shadow: var(--drawer-content-shadow);
+}
 
-	.right & {
-		--drawer-content-shadow: -1px 0px 3px rgba(0, 0, 0, 0.3);
+.right .content {
+	--drawer-content-shadow: -1px 0px 3px rgba(0, 0, 0, 0.3);
 
-		transform: translateX(200%);
-	}
+	transform: translateX(200%);
+}
 
-	.right.open & {
-		transform: translateX(100%);
-	}
+.right.open .content {
+	transform: translateX(100%);
 }
