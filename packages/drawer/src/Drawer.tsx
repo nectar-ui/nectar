@@ -2,7 +2,7 @@ import { Primitive, type Component } from '@nectar-ui/primitive'
 import { clsx } from 'clsx'
 import { forwardRef } from 'react'
 import { createPortal } from 'react-dom'
-import styles from './Drawer.module.css'
+import styles from './drawer.module.css'
 
 export type DrawerOwnProps = {
 	dir?: 'left' | 'right'

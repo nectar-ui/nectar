@@ -11,7 +11,7 @@ import {
 } from '@nectar-ui/tokens'
 import { clsx } from 'clsx'
 import { forwardRef } from 'react'
-import styles from './Text.module.css'
+import styles from './text.module.css'
 
 export const textElements = [
 	'h1',

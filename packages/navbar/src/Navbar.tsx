@@ -1,7 +1,7 @@
 import { Primitive, type Component } from '@nectar-ui/primitive'
 import { clsx } from 'clsx'
 import { ElementType, forwardRef } from 'react'
-import styles from './Navbar.module.css'
+import styles from './navbar.module.css'
 
 type NavbarProps = {}
 type NavbarSectionProps = {}
