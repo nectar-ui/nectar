@@ -4,7 +4,7 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
 	entry: ['src/index.ts'],
-	plugins: [CssModulesPlugin({ inject: true, generateTsFile: true })],
+	plugins: [CssModulesPlugin({ generateTsFile: true })],
 	minify: true,
 	tsconfig: path.resolve(__dirname, './tsconfig.base.json'),
 	onSuccess: 'tsc -b',
