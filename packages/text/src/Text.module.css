@@ -3,8 +3,8 @@
 	font-size: var(--text-size);
 	font-family: var(--text-font);
 	font-weight: var(--text-weight);
-	line-height: var(--text-leading);
-	letter-spacing: var(--text-kerning);
+	line-height: var(--text-line-height);
+	letter-spacing: var(--text-letter-spacing);
 	margin-bottom: var(--text-gap);
 }
 
@@ -18,7 +18,7 @@
 
 .lead {
 	--text-size: var(--font-sizes-lg);
-	--text-color: var(--colors-text-subtle);
+	--text-color: var(--text-color-subtle);
 }
 
 .caps {
@@ -36,11 +36,12 @@
 .heading {
 	--text-weight: var(--font-weights-bold);
 	--text-line-height: var(--line-heights-tight);
-	--text-margin: 0;
+	--text-gap: 0;
 }
 
 .display {
 	composes: heading;
+	text-transform: uppercase;
 	--text-size: var(--font-sizes-7xl);
 }
 

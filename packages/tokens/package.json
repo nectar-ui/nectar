@@ -24,7 +24,6 @@
 	],
 	"dependencies": {
 		"@radix-ui/colors": "^0.1.0",
-		"@nectar-ui/types": "workspace:*",
 		"csstype": "^3.1.2"
 	}
 }

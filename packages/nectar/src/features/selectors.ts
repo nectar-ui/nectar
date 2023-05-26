@@ -1,5 +1,5 @@
-import type { Selectors } from '@nectar-ui/types'
 import type { Root } from 'postcss'
+import type { Selectors } from '../types.js'
 
 const SELECTOR_REGEX = /:--[A-z][\w-]*/g
 

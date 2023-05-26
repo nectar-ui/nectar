@@ -1,5 +1,4 @@
-import { Primitive } from '@nectar-ui/primitive'
-import type { Component } from '@nectar-ui/types'
+import { Primitive, type Component } from '@nectar-ui/primitive'
 import { clsx } from 'clsx'
 import { ElementType, forwardRef } from 'react'
 import styles from './Navbar.module.css'
@@ -8,8 +7,8 @@ type NavbarProps = {}
 type NavbarSectionProps = {}
 type NavbarItemProps = {}
 
-type NavbarSectionComponent = Component<ElementType, NavbarSectionProps>
-type NavbarItemComponent = Component<ElementType, NavbarItemProps>
+type NavbarSectionComponent = Component<React.ElementType, NavbarSectionProps>
+type NavbarItemComponent = Component<React.ElementType, NavbarItemProps>
 
 interface NavbarComponents {
 	section: NavbarSectionComponent

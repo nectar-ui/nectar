@@ -1,5 +1,5 @@
-import type { MediaQueries } from '@nectar-ui/types'
 import { camelCaseReplacer } from '../replacer/camelCaseReplacer.js'
+import type { MediaQueries } from '../types.js'
 
 export function prepareMediaQueries(media: MediaQueries): MediaQueries {
 	const css: MediaQueries = {}

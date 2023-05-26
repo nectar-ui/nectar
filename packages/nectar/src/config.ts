@@ -1,12 +1,12 @@
-import { darkTokens, mediaQueries, tokens } from '@nectar-ui/tokens'
-import { Configuration } from '@nectar-ui/types'
+import { darkTokens, mediaQueryTokens, tokens } from '@nectar-ui/tokens'
+import { Configuration } from './types.js'
 
 export const config: Configuration = {
 	tokens: {
 		base: tokens,
 		dark: darkTokens
 	},
-	mediaQueries: mediaQueries,
+	mediaQueries: mediaQueryTokens,
 	properties: {
 		mt: (value: React.CSSProperties['marginTop']) => ({
 			marginTop: value

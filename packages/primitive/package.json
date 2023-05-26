@@ -22,9 +22,6 @@
 	"files": [
 		"dist"
 	],
-	"dependencies": {
-		"@nectar-ui/types": "workspace:*"
-	},
 	"peerDependencies": {
 		"react": "^16.8 || ^17 || ^18"
 	}

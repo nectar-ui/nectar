@@ -1,6 +1,5 @@
-import type { Scale, Tokens } from '@nectar-ui/types'
 import { camelCaseReplacer } from '../replacer/camelCaseReplacer.js'
-import type { TransformedTokens } from '../types.js'
+import type { Scale, Tokens, TransformedTokens } from '../types.js'
 
 export function prepareTokens(tokens: Tokens) {
 	const css: TransformedTokens = {}

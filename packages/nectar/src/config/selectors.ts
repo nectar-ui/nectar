@@ -1,5 +1,5 @@
-import type { Selectors } from '@nectar-ui/types'
 import { camelCaseReplacer } from '../replacer/camelCaseReplacer.js'
+import type { Selectors } from '../types.js'
 
 export function prepareSelectors(selectors: Selectors): Selectors {
 	const css: Selectors = {}

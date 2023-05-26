@@ -5,5 +5,5 @@
 		"rootDir": "./src"
 	},
 	"include": ["./src/**/*", "../../nectar.d.ts"],
-	"references": [{ "path": "../types" }, { "path": "../primitive" }, { "path": "../tokens" }]
+	"references": [{ "path": "../primitive" }, { "path": "../tokens" }]
 }

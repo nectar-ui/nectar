@@ -1,5 +1,5 @@
-import type { MediaQueries } from '@nectar-ui/types'
 import type { AtRule } from 'postcss'
+import type { MediaQueries } from '../types.js'
 
 const MEDIA_REGEX = /\(--[A-z][\w-]*\)/
 

@@ -1,44 +1,52 @@
 .box {
-	background-color: var(--box-background);
-	color: var(--box-color);
-	padding: var(--box-padding);
+	background: var(--box-background);
+	padding: var(--box-padding-top) var(--box-padding-right) var(--box-padding-bottom)
+		var(--box-padding-left);
+	border-color: var(--box-border-top-color) var(--box-border-right-color)
+		var(--box-border-bottom-color) var(--box-border-left-color);
+	border-width: var(--box-border-top-width) var(--box-border-right-width)
+		var(--box-border-bottom-width) var(--box-border-left-width);
+	border-style: var(--box-border-top-style) var(--box-border-right-style)
+		var(--box-border-bottom-style) var(--box-border-left-style);
 	box-shadow: var(--box-shadow);
-	border-radius: var(--box-radii);
+	border-radius: var(--box-radii-top-left) var(--box-radii-top-right) var(--box-radii-bottom-right)
+		var(--box-radii-bottom-left);
 }
+
 .contrast {
 	--box-background: var(--colors-contrast);
-	--box-color: var(--colors-contrast-contrast);
+	--text-color: var(--colors-contrast-contrast);
 	--shadows-color: var(--colors-contrast-shadow);
 }
 
 .contrastSubtle {
 	composes: contrast;
 	--box-background: var(--colors-contrast-bg);
-	--box-color: var(--colors-contrast-text-subtle);
+	--text-color: var(--colors-contrast-text-subtle);
 }
 
 .primary {
 	--box-background: var(--colors-primary);
-	--box-color: var(--colors-primary-contrast);
+	--text-color: var(--colors-primary-contrast);
 	--shadows-color: var(--colors-primary-shadow);
 }
 
 .primarySubtle {
 	composes: primary;
 	--box-background: var(--colors-primary-bg);
-	--box-color: var(--colors-primary-text-subtle);
+	--text-color: var(--colors-primary-text-subtle);
 }
 
 .secondary {
 	--box-background: var(--colors-secondary);
-	--box-color: var(--colors-secondary-contrast);
+	--text-color: var(--colors-secondary-contrast);
 	--shadow-color: var(--colors-secondary-shadow);
 }
 
 .secondarySubtle {
 	composes: secondary;
 	--box-background: var(--colors-secondary-bg);
-	--box-color: var(--colors-secondary-text-subtle);
+	--text-color: var(--colors-secondary-text-subtle);
 }
 
 .info {
@@ -50,41 +58,41 @@
 .infoSubtle {
 	composes: info;
 	--box-background: var(--colors-info-bg);
-	--box-color: var(--colors-info-text-subtle);
+	--text-color: var(--colors-info-text-subtle);
 }
 
 .warning {
 	--box-background: var(--colors-warning);
-	--box-color: var(--colors-warning-contrast);
+	--text-color: var(--colors-warning-contrast);
 	--shadow-color: var(--colors-warning-shadow);
 }
 
 .warningSubtle {
 	composes: warning;
 	--box-background: var(--colors-warning-bg);
-	--box-color: var(--colors-warning-text-subtle);
+	--text-color: var(--colors-warning-text-subtle);
 }
 
 .danger {
 	--box-background: var(--colors-danger);
-	--box-color: var(--colors-danger-contrast);
+	--text-color: var(--colors-danger-contrast);
 	--shadow-color: var(--colors-danger-shadow);
 }
 
 .dangerSubtle {
 	composes: danger;
 	--box-background: var(--colors-danger-bg);
-	--box-color: var(--colors-danger-text-subtle);
+	--text-color: var(--colors-danger-text-subtle);
 }
 
 .success {
 	--box-background: var(--colors-success);
-	--box-color: var(--colors-success-contrast);
+	--text-color: var(--colors-success-contrast);
 	--shadow-color: var(--colors-success-shadow);
 }
 
 .successSubtle {
 	composes: success;
 	--box-background: var(--colors-success-bg);
-	--box-color: var(--colors-success-text-subtle);
+	--text-color: var(--colors-success-text-subtle);
 }

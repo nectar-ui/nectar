@@ -1,4 +1,3 @@
-import type { Configuration } from '@nectar-ui/types'
 import { cosmiconfigSync } from 'cosmiconfig'
 import { TypeScriptLoader } from 'cosmiconfig-typescript-loader'
 import merge from 'lodash.merge'
@@ -13,11 +12,10 @@ import {
 import {
 	processMediaQueries,
 	processProperties,
-	processReset,
 	processSelectors,
-	processTokens
+	processStyles
 } from './features/index.js'
-import type { PluginOptions } from './types.js'
+import type { Configuration, PluginOptions } from './types.js'
 
 const MODULE_NAME = 'nectar'
 
@@ -49,8 +47,7 @@ const plugin: PluginCreator<PluginOptions> = opts => {
 		postcssPlugin: '@nectar-ui/postcss-plugin',
 		Once: processSelectors(selectors),
 		AtRule: {
-			'nectar-reset': processReset,
-			'nectar-tokens': processTokens(tokens),
+			nectar: processStyles(tokens),
 			media: processMediaQueries(mediaQueries)
 		},
 		Declaration: properties

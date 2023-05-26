@@ -1,4 +1,4 @@
-export const mediaQueries = {
+export const mediaQueryTokens = {
 	'motion-ok': '(prefers-reduced-motion: no-preference)',
 	'motion-not-ok': '(prefers-reduced-motion: reduce)',
 	'opacity-ok': '(prefers-reduced-transparency: no-preference)',
@@ -50,5 +50,3 @@ export const mediaQueries = {
 	xxl: '(width >= 1920px)',
 	'xxl-max': '(width < 1920px)'
 }
-
-export type MediaQueries = keyof typeof mediaQueries

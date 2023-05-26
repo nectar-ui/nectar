@@ -1,5 +1,4 @@
-import { Primitive } from '@nectar-ui/primitive'
-import { Component } from '@nectar-ui/types'
+import { Primitive, type Component } from '@nectar-ui/primitive'
 import { clsx } from 'clsx'
 import { forwardRef } from 'react'
 import { createPortal } from 'react-dom'
@@ -13,7 +12,7 @@ export type DrawerOwnProps = {
 export type DrawerTriggerComponent = Component<'button'>
 
 export type DrawerComponent = Component<'div', DrawerOwnProps> & {
-	trigger: Component<'button'>
+	trigger: DrawerTriggerComponent
 }
 
 export const Drawer = forwardRef(

@@ -1,40 +1,46 @@
 import {
-	transitionDelays,
-	transitionDurations,
-	transitionProperties,
-	transitionTimingFunctions
+	transitionDelayTokens,
+	transitionDurationTokens,
+	transitionPropertyTokens,
+	transitionTimingFunctionTokens
 } from './animation.js'
-import { borderStyles, borderWidths, radii } from './border.js'
-import { colors, darkColors, opacity, shadows } from './colors.js'
+import { borderStyleTokens, borderWidthTokens, radiiTokens } from './border.js'
+import { colorTokens, darkColorTokens, opacityTokens, shadowTokens } from './colors.js'
 import { componentTokens } from './components.js'
-import { screens, sizings, spacings, zIndices } from './layout.js'
-import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './typography.js'
+import { breakpointTokens, sizingTokens, spacingTokens, zIndiceTokens } from './layout.js'
+import {
+	fontSizeTokens,
+	fontTokens,
+	fontWeightTokens,
+	letterSpacingTokens,
+	lineHeightTokens
+} from './typography.js'
 
 export const tokens = {
-	colors: colors,
-	fonts: fonts,
-	fontWeights: fontWeights,
-	fontSizes: fontSizes,
-	letterSpacings: letterSpacings,
-	lineHeights: lineHeights,
-	transitionDelays: transitionDelays,
-	transitionDurations: transitionDurations,
-	transitionProperties: transitionProperties,
-	transitionTimingFunctions: transitionTimingFunctions,
-	spacings: spacings,
-	screens: screens,
-	sizings: sizings,
-	opacity: opacity,
-	shadows: shadows,
-	radii: radii,
-	borderWidths: borderWidths,
-	borderStyles: borderStyles,
-	zIndices: zIndices,
+	colors: colorTokens,
+	fonts: fontTokens,
+	fontWeights: fontWeightTokens,
+	fontSizes: fontSizeTokens,
+	letterSpacings: letterSpacingTokens,
+	lineHeights: lineHeightTokens,
+	transitionDelays: transitionDelayTokens,
+	transitionDurations: transitionDurationTokens,
+	transitionProperties: transitionPropertyTokens,
+	transitionTimingFunctions: transitionTimingFunctionTokens,
+	spacings: spacingTokens,
+	breakpoints: breakpointTokens,
+	sizings: sizingTokens,
+	opacity: opacityTokens,
+	shadows: shadowTokens,
+	radii: radiiTokens,
+	borderWidths: borderWidthTokens,
+	borderStyles: borderStyleTokens,
+	zIndices: zIndiceTokens,
 	...componentTokens
 }
 
 export const darkTokens = {
-	colors: darkColors,
+	colors: darkColorTokens,
 	...componentTokens
 }
 

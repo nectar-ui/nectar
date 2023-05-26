@@ -5,5 +5,5 @@
 		"rootDir": "./src"
 	},
 	"include": ["./src/**/*"],
-	"references": [{ "path": "../types" }, { "path": "../tokens" }, { "path": "../components" }]
+	"references": [{ "path": "../tokens" }, { "path": "../components" }]
 }

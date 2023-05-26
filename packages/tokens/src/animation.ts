@@ -13,11 +13,11 @@ const __timings = {
 	3000: '3000ms'
 }
 
-export const transitionDelays = __timings
+export const transitionDelayTokens = __timings
 
-export const transitionDurations = __timings
+export const transitionDurationTokens = __timings
 
-export const transitionProperties = {
+export const transitionPropertyTokens = {
 	none: 'none',
 	all: 'all',
 	colors: 'color, background-color, border-color, text-decoration-color, fill, stroke',
@@ -26,7 +26,7 @@ export const transitionProperties = {
 	transform: 'transform'
 }
 
-export const transitionTimingFunctions = {
+export const transitionTimingFunctionTokens = {
 	linear: 'linear',
 	in: 'cubic-bezier(0.4, 0, 1, 1)',
 	out: 'cubic-bezier(0, 0, 0.2, 1)',

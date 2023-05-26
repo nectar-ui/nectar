@@ -1,4 +1,4 @@
-export const radii = {
+export const radiiTokens = {
 	none: '0px',
 	xs: '0.125rem',
 	sm: '0.25rem',
@@ -10,7 +10,7 @@ export const radii = {
 	full: '9999px'
 }
 
-export const borderWidths = {
+export const borderWidthTokens = {
 	0: '0',
 	1: '1px',
 	2: '2px',
@@ -19,7 +19,7 @@ export const borderWidths = {
 	5: '25px'
 }
 
-export const borderStyles = {
+export const borderStyleTokens = {
 	none: 'none',
 	solid: 'solid',
 	dashed: 'dashed'

@@ -24,7 +24,6 @@
 	],
 	"dependencies": {
 		"@nectar-ui/primitive": "workspace:*",
-		"@nectar-ui/types": "workspace:*",
 		"clsx": "^1.2.1"
 	},
 	"peerDependencies": {

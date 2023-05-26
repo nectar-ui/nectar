@@ -1,14 +1,13 @@
 import { withThemeByClassName } from '@storybook/addon-styling'
 import { Preview } from '@storybook/react'
+import { themes } from '@storybook/theming'
 import './styles.css'
 
 const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
-	controls: {
-		matchers: {
-			color: /(background|color)$/i,
-			date: /Date$/
-		}
+	backgrounds: { disable: true },
+	docs: {
+		theme: themes.dark
 	}
 }
 
@@ -18,8 +17,8 @@ const decorators = [
 			light: 'light',
 			dark: 'dark'
 		},
-		defaultTheme: 'light',
-		parentSelector: 'body'
+		defaultTheme: 'dark',
+		parentSelector: 'html'
 	})
 ]
 

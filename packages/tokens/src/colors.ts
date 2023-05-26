@@ -1,6 +1,6 @@
 import * as palettes from '@radix-ui/colors'
 
-const lightPalettes = {
+const lightPaletteTokens = {
 	...palettes.tomato,
 	...palettes.tomatoA,
 	...palettes.red,
@@ -60,7 +60,7 @@ const lightPalettes = {
 	...palettes.blackA
 }
 
-const darkPalettes = {
+const darkPaletteTokens = {
 	...palettes.tomatoDark,
 	...palettes.tomatoDarkA,
 	...palettes.redDark,
@@ -119,7 +119,7 @@ const darkPalettes = {
 	...palettes.sageDarkA
 }
 
-const themeColors = {
+const themeColorTokens = {
 	// Contrast Theme Colors
 	'contrast-contrast': 'var(--colors-slate1)',
 	'contrast-bg-subtle': 'var(--colors-slate2)',
@@ -226,17 +226,17 @@ const themeColors = {
 	'info-shadow': 'var(--colors-blue-a9)'
 }
 
-export const colors = {
-	...lightPalettes,
-	...themeColors
+export const colorTokens = {
+	...lightPaletteTokens,
+	...themeColorTokens
 }
 
-export const darkColors = {
-	...darkPalettes,
-	...themeColors
+export const darkColorTokens = {
+	...darkPaletteTokens,
+	...themeColorTokens
 }
 
-export const opacity = {
+export const opacityTokens = {
 	0: '0',
 	5: '0.05',
 	10: '0.1',
@@ -254,7 +254,7 @@ export const opacity = {
 	100: '1'
 }
 
-export const shadows = {
+export const shadowTokens = {
 	color: 'var(--colors-black-a9)',
 	xs: '0 1px 2px 0 var(--shadows-color)',
 	sm: '0 1px 3px 0 var(--shadows-color), 0 1px 2px -1px var(--shadows-color)',

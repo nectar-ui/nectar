@@ -1,102 +1,86 @@
 import { type PropertyValue } from 'csstype'
-
 import {
-	transitionDelays,
-	transitionDurations,
-	transitionProperties,
-	transitionTimingFunctions
+	transitionDelayTokens,
+	transitionDurationTokens,
+	transitionPropertyTokens,
+	transitionTimingFunctionTokens
 } from './animation.js'
-import { borderStyles, borderWidths, radii } from './border.js'
-import { colors, opacity, shadows } from './colors.js'
-import { base, box, text } from './components.js'
-import { screens, sizings, spacings, zIndices } from './layout.js'
-import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './typography.js'
-
+import { borderStyleTokens, borderWidthTokens, radiiTokens } from './border.js'
+import { colorTokens, opacityTokens, shadowTokens } from './colors.js'
+import { boxTokens, textTokens } from './components.js'
+import { breakpointTokens, sizingTokens, spacingTokens, zIndiceTokens } from './layout.js'
+import { mediaQueryTokens } from './mediaQueries.js'
+import {
+	fontSizeTokens,
+	fontTokens,
+	fontWeightTokens,
+	letterSpacingTokens,
+	lineHeightTokens
+} from './typography.js'
 /** Animation */
 
-export type TransitionTimingFunctions =
-	`--transition-timing-functions-${keyof typeof transitionTimingFunctions}`
+export type TransitionTimingFunctionTokens =
+	`--transition-timing-functions-${keyof typeof transitionTimingFunctionTokens}`
 
-export type TransitionProperties = `--transition-properties-${keyof typeof transitionProperties}`
+export type TransitionPropertyTokens =
+	`--transition-properties-${keyof typeof transitionPropertyTokens}`
 
-export type TransitionDurations = `--transition-durations-${keyof typeof transitionDurations}`
+export type TransitionDurationTokens =
+	`--transition-durations-${keyof typeof transitionDurationTokens}`
 
-export type TransitionDelays = `--transition-delays-${keyof typeof transitionDelays}`
+export type TransitionDelayTokens = `--transition-delays-${keyof typeof transitionDelayTokens}`
 
 /** Borders */
 
-export type Radii = `--radii-${keyof typeof radii}`
+export type RadiiTokens = `--radii-${keyof typeof radiiTokens}`
 
-export type BorderWidths = `--border-widths-${keyof typeof borderWidths}`
+export type BorderWidthTokens = `--border-widths-${keyof typeof borderWidthTokens}`
 
-export type BorderStyles = `--border-styles-${keyof typeof borderStyles}`
+export type BorderStyleTokens = `--border-styles-${keyof typeof borderStyleTokens}`
 
 /** Colors */
 
-export type Shadows = `--shadow-${keyof typeof shadows}`
+export type ShadowTokens = `--shadow-${keyof typeof shadowTokens}`
 
-export type Opacity = `--opacity--${keyof typeof opacity}`
+export type OpacityTokens = `--opacity--${keyof typeof opacityTokens}`
 
-export type Colors = `--colors-${keyof typeof colors}`
-
-export type BrandColor =
-	| 'contrast'
-	| 'primary'
-	| 'secondary'
-	| 'info'
-	| 'danger'
-	| 'warning'
-	| 'success'
-
-export type AliasedPalette = {
-	base: string
-	bgSubtle: string
-	bg: string
-	bgHover: string
-	bgActive: string
-	line: string
-	border: string
-	borderHover: string
-	solid: string
-	solidHover: string
-	text: string
-	contrastText: string
-	shadow: string
-}
+export type ColorTokens = `--colors-${keyof typeof colorTokens}`
 
 /** Layout */
 
-export type ZIndices = `--z-indices-${keyof typeof zIndices}`
+export type ZIndiceTokens = `--z-indices-${keyof typeof zIndiceTokens}`
 
 /** Space */
 
-export type Spacings = `--spacings-${keyof typeof spacings}`
+export type SpacingTokens = `--spacings-${keyof typeof spacingTokens}`
 
-export type Screens = `--screens-${keyof typeof screens}`
+export type BreakpointTokens = `--breakpoints-${keyof typeof breakpointTokens}`
 
-export type Sizings = `--sizings-${keyof typeof sizings}`
+export type SizingTokens = `--sizings-${keyof typeof sizingTokens}`
 
 /** Typography */
 
-export type Fonts = `--fonts-${keyof typeof fonts}`
+export type FontTokens = `--fonts-${keyof typeof fontTokens}`
 
-export type FontSizes = `--font-sizes-${keyof typeof fontSizes}`
+export type FontSizeTokens = `--font-sizes-${keyof typeof fontSizeTokens}`
 
-export type FontWeights = `--font-weights-${keyof typeof fontWeights}`
+export type FontWeightTokens = `--font-weights-${keyof typeof fontWeightTokens}`
 
-export type LetterSpacings = `--letter-spacings-${keyof typeof letterSpacings}`
+export type LetterSpacingTokens = `--letter-spacings-${keyof typeof letterSpacingTokens}`
 
-export type LineHeights = `--line-heights-${keyof typeof lineHeights}`
+export type LineHeightTokens = `--line-heights-${keyof typeof lineHeightTokens}`
 
 /** Components */
 
-export type Base = `--base-${keyof typeof base}`
+export type TextTokens = `--text-${keyof typeof textTokens}`
 
-export type Text = `--text-${keyof typeof text}`
+export type BoxTokens = `--box-${keyof typeof boxTokens}`
 
-export type Box = `--box-${keyof typeof box}`
-
-export type ComponentTokens = Base | Text | Box
+export type ComponentTokens = TextTokens | BoxTokens
 
 export type ComponentStyles = React.CSSProperties &
-	Partial<Record<ComponentTokens, PropertyValue<any>>>
+	Partial<Record<ComponentTokens, PropertyValue<string | number>>>
+
+/** Media Queries */
+
+export type MediaQueryTokens = `--${keyof typeof mediaQueryTokens}`

@@ -1,7 +1,6 @@
-import type { Properties } from '@nectar-ui/types'
 import postcss from 'postcss'
 import { camelCaseReplacer } from '../replacer/camelCaseReplacer.js'
-import { Declarations } from '../types.js'
+import type { Declarations, Properties } from '../types.js'
 
 export function processProperties<P extends Properties>(properties: P): Declarations<P> {
 	return Object.fromEntries(

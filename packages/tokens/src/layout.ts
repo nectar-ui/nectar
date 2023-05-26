@@ -1,4 +1,4 @@
-export const zIndices = {
+export const zIndiceTokens = {
 	auto: 'auto',
 	bottom: -1,
 	0: 0,
@@ -10,8 +10,8 @@ export const zIndices = {
 	top: 2147483647
 }
 
-export const spacings = {
-	default: 'var(--spacings-5)',
+export const spacingTokens = {
+	base: 'var(--spacings-5)',
 	px: '1px',
 	0: '0px',
 	0.5: '0.125rem',
@@ -49,7 +49,7 @@ export const spacings = {
 	96: '24rem'
 }
 
-export const screens = {
+export const breakpointTokens = {
 	xxs: '240px',
 	xs: '360px',
 	sm: '480px',
@@ -59,8 +59,8 @@ export const screens = {
 	xxl: '1920px'
 }
 
-export const sizings = {
-	...screens,
+export const sizingTokens = {
+	...breakpointTokens,
 	'1/2': '50%',
 	'1/3': '33.333333%',
 	'2/3': '66.666667%',
