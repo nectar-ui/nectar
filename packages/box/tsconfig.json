@@ -4,6 +4,5 @@
 		"declarationDir": "./dist",
 		"rootDir": "./src"
 	},
-	"include": ["./src/**/*", "../../nectar.d.ts"],
-	"references": [{ "path": "../primitive" }, { "path": "../tokens" }]
+	"include": ["./src/**/*", "../../nectar.d.ts"]
 }

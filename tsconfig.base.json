@@ -1,7 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"compilerOptions": {
-		"composite": true,
 		"declaration": true,
 		"declarationMap": true,
 		"emitDeclarationOnly": true,
@@ -13,8 +12,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "ESNext",
-		"plugins": [{ "name": "typescript-plugin-css-modules" }]
+		"target": "ESNext"
 	},
 	"ts-node": {
 		"esm": true

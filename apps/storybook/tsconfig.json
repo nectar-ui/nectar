@@ -4,6 +4,5 @@
 		"declarationDir": "./dist",
 		"rootDir": "./src"
 	},
-	"include": ["./src/**/*", "../../nectar.d.ts"],
-	"references": [{ "path": "../../packages/nectar" }]
+	"include": ["./src/**/*", "../../nectar.d.ts"]
 }

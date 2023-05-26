@@ -4,12 +4,5 @@
 		"declarationDir": "./dist",
 		"rootDir": "./src"
 	},
-	"include": ["./src/**/*", "../../nectar.d.ts"],
-	"references": [
-		{ "path": "../navbar" },
-		{ "path": "../text" },
-		{ "path": "../box" },
-		{ "path": "../drawer" },
-		{ "path": "../primitive" }
-	]
+	"include": ["./src/**/*", "../../nectar.d.ts"]
 }
