@@ -11,10 +11,8 @@ export function processStyles(
 ): (atrule: AtRule, helpers: Helpers) => void {
 	return (atrule, { decl, rule }) => {
 		const cssPath = require.resolve(RESET_LIBRARY)
-		console.log(cssPath)
 		const css = readFileSync(cssPath)
 		const style = parse(css)
-		console.log(style)
 		atrule.root().append(style)
 		Object.keys(tokens).forEach(mode => {
 			const selector = mode == 'base' ? 'html' : `html.${mode}`

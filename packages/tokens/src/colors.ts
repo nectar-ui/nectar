@@ -166,7 +166,7 @@ const themeColorTokens = {
 	'secondary-shadow': 'var(--colors-sky-a9)',
 
 	// Warning Context Colors
-	'warning-contrast': 'var(--colo1qrs-yellow1)',
+	'warning-contrast': 'var(--colors-yellow1)',
 	'warning-bg-subtle': 'var(--colors-yellow2)',
 	'warning-bg': 'var(--colors-yellow3)',
 	'waring-bg-hover': 'var(--colors-yellow4)',
