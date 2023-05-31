@@ -1,8 +1,8 @@
-import * as React from 'react'
+import { forwardRef } from 'react'
 
-export type Merge<P1 = {}, P2 = {}> = Omit<P1, keyof P2> & P2
+type Merge<P1 = {}, P2 = {}> = Omit<P1, keyof P2> & P2
 
-export type MergeProps<E, P = {}> = P &
+type MergeProps<E, P = {}> = P &
 	Merge<E extends React.ElementType ? React.ComponentPropsWithRef<E> : never, P>
 
 /**
@@ -16,22 +16,32 @@ export type OwnProps<E> = E extends Component<any, infer P> ? P : {}
 export type IntrinsicElement<E> = E extends Component<infer I, any> ? I : never
 
 export interface Component<Element, OwnProps = {}>
-	extends React.ForwardRefExoticComponent<MergeProps<Element, OwnProps & { as?: Element }>> {
+	extends React.ForwardRefExoticComponent<
+		MergeProps<Element, OwnProps & PrimitiveOwnProps<Element>>
+	> {
 	<As extends keyof JSX.IntrinsicElements>(
-		props: MergeProps<As, OwnProps & { as: As }>
+		props: MergeProps<As, OwnProps & PrimitiveOwnProps<As>>
 	): React.ReactElement | null
 	<
 		As extends React.ElementType<any>,
 		AsWithProps = As extends React.ElementType<infer P> ? React.ElementType<P> : never
 	>(
-		props: MergeProps<AsWithProps, OwnProps & { as: AsWithProps }>
+		props: MergeProps<AsWithProps, OwnProps & PrimitiveOwnProps<AsWithProps>>
 	): React.ReactElement | null
 }
 
-export type PrimitiveOwnProps = {}
+export type PrimitiveOwnProps<As = unknown> = {
+	filterProps?: string[]
+	as?: As
+}
 
 export type PrimitiveComponent = Component<'div', PrimitiveOwnProps>
 
-export const Primitive: PrimitiveComponent = React.forwardRef(
-	({ as: Comp = 'div', ...props }, ref) => <Comp {...props} ref={ref} />
+export const Primitive: PrimitiveComponent = forwardRef(
+	({ as: Comp = 'div', filterProps, ...props }, ref) => {
+		filterProps?.forEach(
+			prop => Object.hasOwn(props, prop) && delete props[prop as keyof typeof props]
+		)
+		return <Comp {...props} ref={ref} />
+	}
 )
