@@ -17,7 +17,7 @@ import {
 } from '@nectar-ui/tokens'
 import { clsx } from 'clsx'
 import { CSSProperties, forwardRef } from 'react'
-import styles from './Box.module.css' assert { type: 'css' }
+import styles from './Box.module.css'
 
 export const boxElements = ['div', 'span', 'section', 'legend', 'ul', 'li'] as const
 export type BoxElements = (typeof boxElements)[number]
