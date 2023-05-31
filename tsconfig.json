@@ -9,7 +9,8 @@
 		{ "path": "./packages/primitive" },
 		{ "path": "./packages/nectar" },
 		{ "path": "./packages/tokens" },
-		{ "path": "./packages/seperator" }
+		{ "path": "./packages/seperator" },
+		{ "path": "./packages/spacer" }
 	],
 	"include": ["*.ts"]
 }

@@ -11,6 +11,7 @@
 		{ "path": "../box" },
 		{ "path": "../drawer" },
 		{ "path": "../primitive" },
-		{ "path": "../seperator" }
+		{ "path": "../seperator" },
+		{ "path": "../spacer" }
 	]
 }

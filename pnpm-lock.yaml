@@ -154,12 +154,16 @@ importers:
       '@nectar-ui/drawer': workspace:*
       '@nectar-ui/navbar': workspace:*
       '@nectar-ui/primitive': workspace:*
+      '@nectar-ui/seperator': workspace:*
+      '@nectar-ui/spacer': workspace:*
       '@nectar-ui/text': workspace:*
     dependencies:
       '@nectar-ui/box': link:../box
       '@nectar-ui/drawer': link:../drawer
       '@nectar-ui/navbar': link:../navbar
       '@nectar-ui/primitive': link:../primitive
+      '@nectar-ui/seperator': link:../seperator
+      '@nectar-ui/spacer': link:../spacer
       '@nectar-ui/text': link:../text
 
   packages/drawer:
@@ -198,6 +202,26 @@ importers:
 
   packages/primitive:
     specifiers: {}
+
+  packages/seperator:
+    specifiers:
+      '@nectar-ui/primitive': workspace:*
+      '@nectar-ui/tokens': workspace:*
+      clsx: ^1.2.1
+    dependencies:
+      '@nectar-ui/primitive': link:../primitive
+      '@nectar-ui/tokens': link:../tokens
+      clsx: 1.2.1
+
+  packages/spacer:
+    specifiers:
+      '@nectar-ui/primitive': workspace:*
+      '@nectar-ui/tokens': workspace:*
+      clsx: ^1.2.1
+    dependencies:
+      '@nectar-ui/primitive': link:../primitive
+      '@nectar-ui/tokens': link:../tokens
+      clsx: 1.2.1
 
   packages/stories:
     specifiers:

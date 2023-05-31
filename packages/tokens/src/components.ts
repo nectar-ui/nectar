@@ -62,8 +62,13 @@ export const seperatorTokens = {
 	styling: 'solid'
 }
 
+export const spacerTokens = {
+	size: 'var(--spacings-base)'
+}
+
 export const componentTokens = {
 	text: textTokens,
 	box: boxTokens,
-	seperator: seperatorTokens
+	seperator: seperatorTokens,
+	spacer: spacerTokens
 }

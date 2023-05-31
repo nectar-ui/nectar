@@ -11,6 +11,7 @@
 	box-shadow: var(--box-shadow);
 	border-radius: var(--box-radii-top-left) var(--box-radii-top-right) var(--box-radii-bottom-right)
 		var(--box-radii-bottom-left);
+	color: var(--text-color);
 }
 
 .contrast {
