@@ -1,0 +1,9 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"declarationDir": "./dist",
+		"rootDir": "./src"
+	},
+	"include": ["./src/**/*", "./src/Seperator.module.css", "../../nectar.d.ts"],
+	"references": [{ "path": "../tokens" }, { "path": "../primitive" }]
+}

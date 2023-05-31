@@ -56,11 +56,14 @@ export const boxTokens = {
 
 export const seperatorTokens = {
 	color: 'var(--colors-contrast-border)',
-	size: '1px',
-	gap: 'var(--spacings-base)'
+	size: 'var(--sizings-px)',
+	gap: 'var(--spacings-base)',
+	alignment: 'center',
+	styling: 'solid'
 }
 
 export const componentTokens = {
 	text: textTokens,
-	box: boxTokens
+	box: boxTokens,
+	seperator: seperatorTokens
 }

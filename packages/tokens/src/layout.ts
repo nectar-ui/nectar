@@ -10,8 +10,7 @@ export const zIndiceTokens = {
 	top: 2147483647
 }
 
-export const spacingTokens = {
-	base: 'var(--spacings-5)',
+const sizes = {
 	px: '1px',
 	0: '0px',
 	0.5: '0.125rem',
@@ -46,21 +45,7 @@ export const spacingTokens = {
 	64: '16rem',
 	72: '18rem',
 	80: '20rem',
-	96: '24rem'
-}
-
-export const breakpointTokens = {
-	xxs: '240px',
-	xs: '360px',
-	sm: '480px',
-	md: '768px',
-	lg: '1024px',
-	xl: '1440px',
-	xxl: '1920px'
-}
-
-export const sizingTokens = {
-	...breakpointTokens,
+	96: '24rem',
 	'1/2': '50%',
 	'1/3': '33.333333%',
 	'2/3': '66.666667%',
@@ -92,4 +77,24 @@ export const sizingTokens = {
 	min: 'min-content',
 	max: 'max-content',
 	fit: 'fit-content'
+}
+
+export const spacingTokens = {
+	...sizes,
+	base: 'var(--spacings-5)'
+}
+
+export const breakpointTokens = {
+	xxs: '240px',
+	xs: '360px',
+	sm: '480px',
+	md: '768px',
+	lg: '1024px',
+	xl: '1440px',
+	xxl: '1920px'
+}
+
+export const sizingTokens = {
+	...sizes,
+	...breakpointTokens
 }

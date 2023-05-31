@@ -1,0 +1,43 @@
+.seperator {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-self: stretch;
+	margin-bottom: var(--seperator-gap);
+	white-space: nowrap;
+}
+
+.seperator:before,
+.seperator:after {
+	content: '';
+	flex-grow: 1;
+	height: var(--seperator-size);
+	width: 100%;
+	border-top-color: var(--seperator-color);
+	border-top-width: var(--seperator-size);
+	border-top-style: var(--seperator-styling);
+}
+
+.seperator:not(:empty) {
+	gap: var(--seperator-gap);
+}
+
+.left:before {
+	width: 10%;
+}
+
+.right:after {
+	width: 10%;
+}
+
+.vertical {
+	border-width: 0;
+	margin: 0 var(--seperator-gap);
+	width: var(--seperator-size);
+	display: inline-block;
+	background: var(--seperator-color);
+}
+
+div:has(> .seperator.vertical) {
+	display: flex;
+}

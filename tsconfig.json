@@ -8,7 +8,8 @@
 		{ "path": "./packages/text" },
 		{ "path": "./packages/primitive" },
 		{ "path": "./packages/nectar" },
-		{ "path": "./packages/tokens" }
+		{ "path": "./packages/tokens" },
+		{ "path": "./packages/seperator" }
 	],
 	"include": ["*.ts"]
 }

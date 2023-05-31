@@ -7,7 +7,7 @@ import {
 } from './animation.js'
 import { borderStyleTokens, borderWidthTokens, radiiTokens } from './border.js'
 import { colorTokens, opacityTokens, shadowTokens } from './colors.js'
-import { boxTokens, textTokens } from './components.js'
+import { boxTokens, seperatorTokens, textTokens } from './components.js'
 import { breakpointTokens, sizingTokens, spacingTokens, zIndiceTokens } from './layout.js'
 import { mediaQueryTokens } from './mediaQueries.js'
 import {
@@ -76,7 +76,9 @@ export type TextTokens = `--text-${keyof typeof textTokens}`
 
 export type BoxTokens = `--box-${keyof typeof boxTokens}`
 
-export type ComponentTokens = TextTokens | BoxTokens
+export type SeperatorTokens = `--seperator-${keyof typeof seperatorTokens}`
+
+export type ComponentTokens = TextTokens | BoxTokens | SeperatorTokens
 
 export type ComponentStyles = React.CSSProperties &
 	Partial<Record<ComponentTokens, PropertyValue<string | number>>>

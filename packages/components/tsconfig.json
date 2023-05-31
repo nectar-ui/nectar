@@ -10,6 +10,7 @@
 		{ "path": "../text" },
 		{ "path": "../box" },
 		{ "path": "../drawer" },
-		{ "path": "../primitive" }
+		{ "path": "../primitive" },
+		{ "path": "../seperator" }
 	]
 }

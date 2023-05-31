@@ -21,9 +21,10 @@ body {
 }
 
 hr {
-	height: 0;
-	color: var(--seperator-color);
+	height: 0px;
 	border-width: var(--seperator-size);
+	border-color: var(--seperator-color);
+	border-style: var(--seperator-styling);
 	margin-bottom: var(--seperator-gap);
 }
 
