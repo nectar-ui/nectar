@@ -1,7 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { tokens } from '../../tokens/src/index.js'
-import { Box as BoxComponent, BoxVariants, boxElements, boxVariants } from './../../box/src/Box.js'
-import { Text } from './../../text/src/Text.js'
+import {
+	Box as BoxComponent,
+	BoxVariants,
+	boxElements,
+	boxVariants
+} from '../../../../packages/box/src/Box.js'
+import { Text } from '../../../../packages/text/src/Text.js'
+import { tokens } from '../../../../packages/tokens/src/index.js'
 
 const meta: Meta<typeof BoxComponent> = {
 	title: 'Components/Box',

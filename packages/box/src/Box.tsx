@@ -147,6 +147,9 @@ export interface BoxOwnProps {
 
 export type BoxComponent = Component<BoxElements, BoxOwnProps>
 
+/**
+ * The box component.
+ */
 export const Box: BoxComponent = forwardRef(
 	(
 		{

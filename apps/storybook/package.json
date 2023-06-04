@@ -17,7 +17,6 @@
 	"type": "module",
 	"dependencies": {
 		"@nectar-ui/nectar": "workspace:*",
-		"@nectar-ui/stories": "workspace:*",
 		"@babel/core": "^7.21.4",
 		"@babel/preset-env": "^7.21.4",
 		"@babel/preset-react": "^7.18.6",

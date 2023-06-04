@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Box } from '../../box/src/Box.js'
-import { Spacer as SpacerComponent } from '../../spacer/src/Spacer.js'
-import { spacingTokens } from '../../tokens/src/index.js'
+import { Box } from '../../../../packages/box/src/Box.js'
+import { Spacer as SpacerComponent } from '../../../../packages/spacer/src/Spacer.js'
+import { spacingTokens } from '../../../../packages/tokens/src/index.js'
 
 const meta: Meta<typeof SpacerComponent> = {
 	title: 'Components/Spacer',

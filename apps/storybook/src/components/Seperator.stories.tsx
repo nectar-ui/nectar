@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Seperator as SeperatorComponent } from '../../seperator/src/Seperator.js'
-import { colorTokens, sizingTokens, spacingTokens } from '../../tokens/src/index.js'
+import { Seperator as SeperatorComponent } from '../../../../packages/seperator/src/Seperator.js'
+import { Text } from '../../../../packages/text/src/index.js'
+import { colorTokens, sizingTokens, spacingTokens } from '../../../../packages/tokens/src/index.js'
+
 const meta: Meta<typeof SeperatorComponent> = {
 	title: 'Components/Seperator',
 	component: SeperatorComponent,
@@ -51,4 +53,10 @@ export const Vertical: Story = {
 			<span>Quan ipsa</span>
 		</div>
 	)
+}
+
+export const LabeledSeperator: Story = {
+	args: {
+		children: <Text>Seperator With Text</Text>
+	}
 }

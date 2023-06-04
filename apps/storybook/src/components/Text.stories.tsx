@@ -4,8 +4,8 @@ import {
 	TextVariants,
 	textElements,
 	textVariants
-} from '../../text/src/Text.js'
-import { tokens } from '../../tokens/src/index.js'
+} from '../../../../packages/text/src/Text.js'
+import { tokens } from '../../../../packages/tokens/src/index.js'
 
 const meta: Meta<typeof TextComponent> = {
 	title: 'Components/Text',

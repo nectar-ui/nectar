@@ -24,7 +24,7 @@ export const textTokens = {
 	weight: 'var(--font-weights-base)',
 	'line-height': 'var(--line-heights-base)',
 	'letter-spacing': 'var(--letter-spacings-base)',
-	gap: 'var(--spacings-base)'
+	gap: '0'
 }
 
 export const boxTokens = {

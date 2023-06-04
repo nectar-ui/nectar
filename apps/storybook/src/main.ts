@@ -22,12 +22,7 @@ const config: StorybookConfig = {
 		name: '@storybook/react-webpack5',
 		options: {}
 	},
-	stories: [
-		{
-			directory: '../../../packages/stories/src',
-			files: '**/*.stories.*'
-		}
-	],
+	stories: ['./**/*.stories.*', './docs/**/*'],
 
 	webpackFinal: async config => {
 		config.resolve = {
