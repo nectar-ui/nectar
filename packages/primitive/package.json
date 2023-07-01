@@ -1,28 +1,39 @@
 {
-	"name": "@nectar-ui/primitive",
-	"version": "0.1.0",
-	"description": "The nectarUi primitive component.",
-	"author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/nectar-ui/nectar.git",
-		"directory": "packages/primitive"
-	},
-	"access": "public",
-	"type": "module",
-	"exports": {
-		"types": "./dist/index.d.ts",
-		"import": "./dist/index.js",
-		"require": "./dist/index.cjs"
-	},
-	"scripts": {
-		"build": "tsup ./src/index.ts --config ../../tsup.config.ts"
-	},
-	"files": [
-		"dist"
-	],
-	"peerDependencies": {
-		"react": "^16.8 || ^17 || ^18"
-	}
+  "name": "@nectar-ui/primitive",
+  "version": "0.1.0",
+  "description": "The nectarUi primitive component.",
+  "author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nectar-ui/nectar.git",
+    "directory": "packages/primitive"
+  },
+  "access": "public",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "publishConfig": {
+    "exports": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "test": "vitest run",
+    "build": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.8 || ^17 || ^18"
+  },
+  "build": {
+    "name": "primitive",
+    "entry": "src/index.ts",
+    "es": "index.js",
+    "cjs": "index.cjs.js"
+  }
 }

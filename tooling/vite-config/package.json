@@ -1,0 +1,20 @@
+{
+  "name": "@nectar-ui/vite-config",
+  "version": "0.1.0",
+  "description": "The nectarUi vite configuration.",
+  "author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nectar-ui/nectar.git",
+    "directory": "tooling/vite-config"
+  },
+  "exports": "./src/index.js",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "vite-plugin-dts": "^2.3.0",
+    "@rollup/plugin-commonjs": "^25.0.1"
+  }
+}

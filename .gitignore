@@ -1,16 +1,28 @@
+# dependencies
+node_modules
+
+# build
+dist
+vite.config.ts.timestamp-*
+
+# testing
+coverage
+
 # misc
 *.log
 *.map
 .DS_Store
-TODO.md
 
-# build
-node_modules
+# storybook
 storybook-static
-var
-dist
 
 # typescript
-*.tsbuildinfo
 *.d.ts
 !nectar.d.ts
+!tooling/vite-config/src/index.d.ts
+
+# turbo
+.turbo
+
+# vercel
+.vercel

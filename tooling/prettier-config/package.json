@@ -1,0 +1,15 @@
+{
+  "name": "@nectar-ui/prettier-config",
+  "version": "0.1.0",
+  "description": "The nectarUi prettier configuration.",
+  "author": "Brennan Walsh <mail@brennanwal.sh> (https://brennanwal.sh)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nectar-ui/nectar.git",
+    "directory": "tooling/prettier-config"
+  },
+  "main": "./src/index.js",
+  "private": true,
+  "type": "commonjs"
+}

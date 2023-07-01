@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["tooling/*"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "dependsOn": ["build"],
+      "cache": false
+    },
+    "lint": {
+      "inputs": ["src/**"]
+    },
+    "prod": {
+      "dependsOn": ["build"]
+    },
+    "test": {
+      "inputs": ["src/**"]
+    }
+  }
+}

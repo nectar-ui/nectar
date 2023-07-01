@@ -1,7 +1,10 @@
 {
-	"$schema": "https://unpkg.com/@changesets/config@1.7.0/schema.json",
-	"changelog": ["@changesets/changelog-github", { "repo": "@nectar-ui/nectar-ui" }],
-	"fixed": [["@nectar-ui/*"]],
-	"access": "public",
-	"baseBranch": "main"
+  "$schema": "https://unpkg.com/@changesets/config@1.7.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "@nectar-ui/nectar-UI" }
+  ],
+  "fixed": [["@nectar-ui/*"]],
+  "access": "public",
+  "baseBranch": "main"
 }

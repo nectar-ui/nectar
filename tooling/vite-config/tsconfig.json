@@ -1,0 +1,7 @@
+{
+  "extends": "@nectar-ui/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./src"
+  },
+  "include": ["src/*"]
+}

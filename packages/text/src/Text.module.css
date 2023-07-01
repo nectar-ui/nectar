@@ -6,6 +6,13 @@
 	line-height: var(--text-line-height);
 	letter-spacing: var(--text-letter-spacing);
 	margin-bottom: var(--text-gap);
+	text-transform: var(--text-transform);
+}
+
+.gradient {
+	background: var(--text-gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .small {
@@ -16,13 +23,17 @@
 	--text-size: var(--font-sizes-lg);
 }
 
+.subtle {
+	--text-color: var(--text-color-subtle);
+}
+
 .lead {
 	--text-size: var(--font-sizes-lg);
 	--text-color: var(--text-color-subtle);
 }
 
 .caps {
-	text-transform: uppercase;
+	--text-transform: uppercase;
 	--text-kerning: var(--letter-spacings-wide);
 	--text-weight: var(--font-weights-bold);
 	--text-size: var(--font-sizes-sm);
@@ -34,20 +45,23 @@
 }
 
 .heading {
-	--text-weight: var(--font-weights-bold);
+	--text-weight: var(--font-weights-thin);
 	--text-line-height: var(--line-heights-tight);
 	--text-gap: 0;
 }
 
 .display {
 	composes: heading;
-	text-transform: uppercase;
-	--text-size: var(--font-sizes-7xl);
+	composes: gradient;
+	--text-transform: uppercase;
+	--text-gradient: linear-gradient(to right, var(--colors-primary), var(--colors-primary-text));
+	--text-size: var(--font-sizes-5xl);
 }
 
 .h1 {
 	composes: heading;
-	--text-size: var(--font-sizes-5xl);
+	--text-color: var(--colors-primary-text-subtle);
+	--text-size: var(--font-sizes-3xl);
 }
 
 .h2 {

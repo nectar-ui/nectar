@@ -1,56 +1,56 @@
-import type { Meta, StoryObj } from '@storybook/react'
 import {
-	Text as TextComponent,
-	TextVariants,
-	textElements,
-	textVariants
-} from '../../../../packages/text/src/Text.js'
-import { tokens } from '../../../../packages/tokens/src/index.js'
+  Text as TextComponent,
+  TextVariants,
+  textElements,
+  textVariants,
+  tokens
+} from '@nectar-ui/nectar'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof TextComponent> = {
-	title: 'Components/Text',
-	component: TextComponent,
-	argTypes: {
-		as: {
-			control: 'select',
-			options: textElements,
-			table: {
-				defaultValue: { summary: 'span' }
-			}
-		},
-		variant: {
-			control: 'select',
-			options: textVariants
-		},
-		color: {
-			control: 'select',
-			options: Object.keys(tokens.colors)
-		},
-		fontSize: {
-			control: 'select',
-			options: Object.keys(tokens.fontSizes)
-		},
-		fontWeight: {
-			control: 'select',
-			options: Object.keys(tokens.fontWeights)
-		},
-		letterSpacing: {
-			control: 'select',
-			options: Object.keys(tokens.letterSpacings)
-		},
-		font: {
-			control: 'select',
-			options: Object.keys(tokens.fonts)
-		},
-		lineHeight: {
-			control: 'select',
-			options: Object.keys(tokens.lineHeights)
-		},
-		gap: {
-			control: 'select',
-			options: Object.keys(tokens.spacings)
-		}
-	}
+  title: 'Components/Text',
+  component: TextComponent,
+  argTypes: {
+    as: {
+      control: 'select',
+      options: textElements,
+      table: {
+        defaultValue: { summary: 'span' }
+      }
+    },
+    variant: {
+      control: 'select',
+      options: textVariants
+    },
+    color: {
+      control: 'select',
+      options: Object.keys(tokens.colors)
+    },
+    fontSize: {
+      control: 'select',
+      options: Object.keys(tokens.fontSizes)
+    },
+    fontWeight: {
+      control: 'select',
+      options: Object.keys(tokens.fontWeights)
+    },
+    letterSpacing: {
+      control: 'select',
+      options: Object.keys(tokens.letterSpacings)
+    },
+    fontFamily: {
+      control: 'select',
+      options: Object.keys(tokens.fonts)
+    },
+    lineHeight: {
+      control: 'select',
+      options: Object.keys(tokens.lineHeights)
+    },
+    gap: {
+      control: 'select',
+      options: Object.keys(tokens.spacings)
+    }
+  }
 } satisfies Meta<typeof TextComponent>
 
 export default meta
@@ -58,17 +58,17 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 const template: (variant?: TextVariants) => Story = variant => ({
-	args: {
-		variant: variant,
-		children: variant ? (
-			<>
-				This is a Text component with the <TextComponent fontWeight="bold">{variant}</TextComponent>{' '}
-				variant.
-			</>
-		) : (
-			<>This is the default Text component.</>
-		)
-	}
+  args: {
+    variant: variant,
+    children: variant ? (
+      <>
+        This is a Text component with the{' '}
+        <TextComponent fontWeight="bold">{variant}</TextComponent> variant.
+      </>
+    ) : (
+      <>This is the default Text component.</>
+    )
+  }
 })
 
 export const Text: Story = template()

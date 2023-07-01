@@ -1,9 +1,11 @@
 {
-	"extends": "../../tsconfig.base.json",
-	"compilerOptions": {
-		"declarationDir": "./dist",
-		"rootDir": "./src"
-	},
-	"include": ["./src/**/*", "./src/Box.module.css", "../../nectar.d.ts"],
-	"references": [{ "path": "../primitive" }, { "path": "../tokens" }]
+  "extends": "@nectar-ui/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "."
+  },
+  "include": [
+    "./src/**/*",
+    "vite.config.ts",
+    "../../tooling/tsconfig/nectar.d.ts"
+  ]
 }

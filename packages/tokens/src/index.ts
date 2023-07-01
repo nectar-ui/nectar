@@ -1,56 +1,66 @@
 import {
-	transitionDelayTokens,
-	transitionDurationTokens,
-	transitionPropertyTokens,
-	transitionTimingFunctionTokens
-} from './animation.js'
-import { borderStyleTokens, borderWidthTokens, radiiTokens } from './border.js'
-import { colorTokens, darkColorTokens, opacityTokens, shadowTokens } from './colors.js'
-import { componentTokens } from './components.js'
-import { breakpointTokens, sizingTokens, spacingTokens, zIndiceTokens } from './layout.js'
+  transitionDelayTokens,
+  transitionDurationTokens,
+  transitionPropertyTokens,
+  transitionTimingFunctionTokens
+} from './animation'
+import { borderStyleTokens, borderWidthTokens, radiiTokens } from './border'
 import {
-	fontSizeTokens,
-	fontTokens,
-	fontWeightTokens,
-	letterSpacingTokens,
-	lineHeightTokens
-} from './typography.js'
+  colorTokens,
+  darkColorTokens,
+  opacityTokens,
+  shadowTokens
+} from './colors'
+import { componentTokens } from './components'
+import {
+  breakpointTokens,
+  sizingTokens,
+  spacingTokens,
+  zIndiceTokens
+} from './layout'
+import {
+  fontSizeTokens,
+  fontTokens,
+  fontWeightTokens,
+  letterSpacingTokens,
+  lineHeightTokens
+} from './typography'
 
 export const tokens = {
-	colors: colorTokens,
-	fonts: fontTokens,
-	fontWeights: fontWeightTokens,
-	fontSizes: fontSizeTokens,
-	letterSpacings: letterSpacingTokens,
-	lineHeights: lineHeightTokens,
-	transitionDelays: transitionDelayTokens,
-	transitionDurations: transitionDurationTokens,
-	transitionProperties: transitionPropertyTokens,
-	transitionTimingFunctions: transitionTimingFunctionTokens,
-	spacings: spacingTokens,
-	breakpoints: breakpointTokens,
-	sizings: sizingTokens,
-	opacity: opacityTokens,
-	shadows: shadowTokens,
-	radii: radiiTokens,
-	borderWidths: borderWidthTokens,
-	borderStyles: borderStyleTokens,
-	zIndices: zIndiceTokens,
-	...componentTokens
+  colors: colorTokens,
+  fonts: fontTokens,
+  fontWeights: fontWeightTokens,
+  fontSizes: fontSizeTokens,
+  letterSpacings: letterSpacingTokens,
+  lineHeights: lineHeightTokens,
+  transitionDelays: transitionDelayTokens,
+  transitionDurations: transitionDurationTokens,
+  transitionProperties: transitionPropertyTokens,
+  transitionTimingFunctions: transitionTimingFunctionTokens,
+  spacings: spacingTokens,
+  breakpoints: breakpointTokens,
+  sizings: sizingTokens,
+  opacity: opacityTokens,
+  shadows: shadowTokens,
+  radii: radiiTokens,
+  borderWidths: borderWidthTokens,
+  borderStyles: borderStyleTokens,
+  zIndices: zIndiceTokens,
+  ...componentTokens
 }
 
 export const darkTokens = {
-	colors: darkColorTokens,
-	...componentTokens
+  colors: darkColorTokens,
+  ...componentTokens
 }
 
-export * from './animation.js'
-export * from './border.js'
-export * from './colors.js'
-export * from './components.js'
-export * from './layout.js'
-export * from './mediaQueries.js'
-export * from './types.js'
-export * from './typography.js'
+export * from './animation'
+export * from './border'
+export * from './colors'
+export * from './components'
+export * from './layout'
+export * from './mediaQueries'
+export * from './types'
+export * from './typography'
 
 export type Tokens = keyof typeof tokens
