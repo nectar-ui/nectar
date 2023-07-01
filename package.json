@@ -18,7 +18,7 @@
     "coverage": "vitest run --passWithNoTests",
     "dev": "turbo run dev",
     "format": "prettier --write . --ignore-path .gitignore",
-    "init": "corepack enable && pnpm install",
+    "init": "pnpm install",
     "lint": "turbo run lint",
     "prod": "turbo run prod",
     "publish": "changeset publish",
