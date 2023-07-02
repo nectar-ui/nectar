@@ -48,6 +48,10 @@
   "build": {
     "name": "nectar",
     "entry": "src/index.ts",
+    "formats": [
+      "es",
+      "cjs"
+    ],
     "es": "index.js",
     "cjs": "index.cjs.js"
   }

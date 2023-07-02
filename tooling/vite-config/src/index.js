@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts'
 
 const isExternal = id => !id.startsWith('.') && !path.isAbsolute(id)
 
-export default (dirname, { entry, name, es, cjs }) =>
+export default (dirname, { entry, name, es, cjs, formats }) =>
   defineConfig({
     root: dirname,
     plugins: [react(), dts()],
@@ -13,7 +13,7 @@ export default (dirname, { entry, name, es, cjs }) =>
       lib: {
         entry: entry,
         name: name,
-        formats: ['es', 'umd'],
+        formats: formats ?? ['es'],
         fileName: format => (format == 'es' ? es : cjs)
       },
       rollupOptions: {

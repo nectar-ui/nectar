@@ -19,8 +19,7 @@
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
-        "import": "./dist/index.js",
-        "require": "./dist/index.cjs.js"
+        "import": "./dist/index.js"
       },
       "./reset": "./dist/reset.css"
     }
@@ -63,7 +62,6 @@
   "build": {
     "name": "nectar",
     "entry": "src/index.ts",
-    "es": "index.js",
-    "cjs": "index.cjs.js"
+    "es": "index.js"
   }
 }
